@@ -1,0 +1,341 @@
+/* ============================================================
+   Sonrisa Dental – Survey Pages Stylesheet
+   ============================================================ */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Poppins', sans-serif;
+    background: #f8f9fb;
+    color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header.lp_header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 16px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header_logo img {
+    max-width: 160px;
+    width: 100%;
+    height: auto;
+}
+
+/* Progress Bar */
+.survey-progress {
+    background: #e5e7eb;
+    height: 4px;
+}
+
+.survey-progress-bar {
+    background: #0079FF;
+    height: 4px;
+    transition: width 0.4s ease;
+}
+
+/* Step Container */
+.location-page {
+    min-height: calc(100vh - 73px);
+    display: block;
+    padding: 48px 0 80px;
+}
+
+.location-table {
+    width: 100%;
+}
+
+/* Icon */
+.form-icon {
+    margin-bottom: 20px;
+}
+
+.form-icon i {
+    font-size: 3rem;
+    color: #0079FF;
+}
+
+/* Question Title */
+.form-content {
+    margin-bottom: 36px;
+}
+
+.form-content h1,
+.form-content h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 8px;
+    line-height: 1.3;
+}
+
+.form-content p {
+    font-size: 1rem;
+    color: #6b7280;
+    margin: 0;
+}
+
+/* Step Label */
+.step-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #0079FF;
+    background: #e8f2ff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+}
+
+/* Treatment / Option Cards */
+.treatment-content {
+    margin-bottom: 12px;
+}
+
+.treatment-info {
+    position: relative;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    background: #ffffff;
+    padding: 18px 16px 16px;
+    margin-bottom: 14px;
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+    text-align: center;
+    user-select: none;
+}
+
+.treatment-info:hover {
+    border-color: #0079FF;
+    box-shadow: 0 2px 12px rgba(0, 121, 255, 0.12);
+}
+
+.treatment-info.active {
+    border-color: #0079FF;
+    background: #e8f2ff;
+    box-shadow: 0 2px 12px rgba(0, 121, 255, 0.18);
+}
+
+.treatment-info input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    margin: 0;
+}
+
+.treatment-info h5 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.treatment-info .last-visited-text p {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.treatment-info.active h5,
+.treatment-info.active .last-visited-text p {
+    color: #0079FF;
+}
+
+/* Check mark on selected */
+.treatment-info.active::after {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    font-size: 0.65rem;
+    color: #0079FF;
+    background: #e8f2ff;
+    border: 1.5px solid #0079FF;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 18px;
+}
+
+/* Two-column cards (for Step 4 yes/no) */
+.last-visited-info {
+    padding: 22px 16px;
+}
+
+/* Step 5 – Contact Form */
+.email-content {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.email-content label {
+    display: block;
+    width: 100%;
+    cursor: text;
+}
+
+.email-form {
+    display: block;
+    width: 100%;
+    padding: 13px 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: #1a1a1a;
+    background: #ffffff;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.email-form:focus {
+    border-color: #0079FF;
+    box-shadow: 0 0 0 3px rgba(0, 121, 255, 0.1);
+}
+
+.email-form::placeholder {
+    color: #9ca3af;
+}
+
+/* Consent / Disclaimer */
+.disclaimer-msg {
+    margin-bottom: 14px;
+}
+
+.disclaimer-msg.form-checkbox {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.disclaimer-msg.form-checkbox input[type="checkbox"] {
+    flex-shrink: 0;
+    margin-top: 3px;
+    width: 16px;
+    height: 16px;
+    accent-color: #0079FF;
+    cursor: pointer;
+}
+
+.disclaimer-msg.form-checkbox label {
+    font-size: 0.8rem;
+    color: #6b7280;
+    line-height: 1.5;
+    cursor: pointer;
+    margin: 0;
+}
+
+.disclaimer-msg p {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin: 0;
+}
+
+.disclaimer-msg p a {
+    color: #0079FF;
+    text-decoration: underline;
+}
+
+/* Submit Button */
+.continue-btn {
+    margin-top: 32px;
+}
+
+.click-action {
+    display: inline-block;
+    padding: 15px 40px;
+    background: #0079FF;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: inherit;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    box-shadow: 0 4px 14px rgba(0, 121, 255, 0.3);
+}
+
+.click-action:hover:not(:disabled) {
+    background: #0062cc;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(0, 121, 255, 0.35);
+}
+
+.click-action:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Error Labels */
+.label1 {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #dc2626;
+    margin-top: 4px;
+}
+
+/* Utility */
+.hide-section {
+    display: none;
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 768px) {
+    .location-page {
+        padding: 32px 0 60px;
+    }
+
+    .form-content h1,
+    .form-content h2 {
+        font-size: 1.35rem;
+    }
+
+    .treatment-info {
+        padding: 14px 12px;
+    }
+
+    .treatment-info h5 {
+        font-size: 0.85rem;
+    }
+
+    .click-action {
+        width: 100%;
+        padding: 15px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-content h1,
+    .form-content h2 {
+        font-size: 1.2rem;
+    }
+
+    .header_logo img {
+        max-width: 130px;
+    }
+}

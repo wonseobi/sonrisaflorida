@@ -1,0 +1,533 @@
+<?php
+$page_title       = 'Dentist in Orlando, FL | Sonrisa Dental Specialists';
+$page_description = 'Sonrisa Dental Specialists — comprehensive dental care in Orlando, FL. Serving Lake Nona and Oviedo with general dentistry, dental implants, and orthodontics. Call (407) 359-1960.';
+$page_class       = 'page-home';
+$hide_top_bar     = true;
+$hide_header      = true;
+include __DIR__ . '/includes/header.php';
+?>
+
+<style>
+/* ── Override full-screen gateway constraints for scrollable homepage ── */
+body.page-home {
+  height: auto !important;
+  overflow: visible !important;
+}
+.page-home .site-footer {
+  display: block !important;
+  height: auto !important;
+}
+
+/* ── Minimal sticky top nav ── */
+.hp-topnav {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 68px;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 1px 8px rgba(0,0,0,0.07);
+}
+.hp-topnav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.hp-topnav-logo .site-logo-circles {
+  height: 28px;
+}
+.hp-topnav-logo .site-logo-circles img {
+  height: 46px;
+  width: auto;
+}
+.hp-topnav-logo .site-logo-sub {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ── HERO ── */
+.hp-hero {
+  position: relative;
+  min-height: 72vh;
+  display: flex;
+  align-items: stretch;
+  background: var(--dark);
+  overflow: hidden;
+}
+.hp-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hp-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+}
+.hp-hero-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 40px;
+  padding-top: 80px;
+  padding-bottom: 72px;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+}
+.hp-hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.hp-hero-eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 14px;
+}
+.hp-hero h1 {
+  font-family: var(--font-body);
+  font-size: clamp(38px, 5vw, 64px);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 18px;
+  max-width: 660px;
+}
+.hp-hero-sub {
+  font-size: 17px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.65;
+  max-width: 560px;
+  margin-bottom: 36px;
+}
+.hp-hero-ctas {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.btn-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 36px;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.28);
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+  text-decoration: none;
+}
+.btn-phone:hover {
+  background: rgba(255,255,255,0.18);
+  border-color: rgba(255,255,255,0.5);
+  transform: translateY(-2px);
+}
+
+/* ── Specialties intro header ── */
+.hp-specialties-intro {
+  padding: 72px var(--gutter) 32px;
+  text-align: center;
+  max-width: var(--container);
+  margin: 0 auto;
+}
+.hp-specialties-intro h2 {
+  font-size: clamp(26px, 3vw, 40px);
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+.hp-specialties-intro p {
+  font-size: 16px;
+  color: var(--text-muted);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ── Gateway: fixed height when inside scrollable page ── */
+.gateway-split {
+  flex: none !important;
+  height: 68vh !important;
+  min-height: 440px !important;
+  max-height: 680px !important;
+}
+
+/* ── E-E-A-T ── */
+.hp-eeat {
+  background: var(--bg-light);
+}
+.hp-eeat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin: 48px 0 36px;
+}
+.hp-eeat-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 30px 26px;
+}
+.hp-eeat-icon {
+  font-size: 22px;
+  color: var(--primary);
+  margin-bottom: 14px;
+  display: block;
+}
+.hp-eeat-card h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.hp-eeat-card p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.hp-eeat-cta {
+  text-align: center;
+}
+
+/* ── Nav links ── */
+.hp-topnav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.hp-topnav-links a {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+.hp-topnav-links a:hover { color: var(--primary); }
+
+/* ── Locations split layout ── */
+.hp-locations { background: var(--bg-light); }
+.hp-loc-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 72px;
+  padding: 80px var(--gutter);
+  max-width: var(--container);
+  margin: 0 auto;
+}
+.hp-loc-split + .hp-loc-split {
+  border-top: 1px solid var(--border);
+}
+.hp-loc-map {
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.1);
+}
+.hp-loc-map iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+}
+.hp-loc-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 16px;
+  display: block;
+}
+.hp-loc-content h3 {
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+.hp-loc-content h3 span { color: var(--primary); }
+.hp-loc-desc {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.hp-loc-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.hp-loc-tag {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 20px;
+  background: rgba(0,121,255,0.08);
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid rgba(0,121,255,0.18);
+}
+.hp-loc-checklist {
+  list-style: none;
+  margin-bottom: 32px;
+}
+.hp-loc-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  color: var(--text);
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+.hp-loc-checklist li::before {
+  content: '';
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  margin-top: 1px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 22'%3E%3Ccircle cx='11' cy='11' r='11' fill='%230079FF'/%3E%3Cpath d='M6 11l3.5 3.5 6.5-6.5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .hp-topnav-links { gap: 18px; }
+}
+@media (max-width: 900px) {
+  .hp-eeat-grid { grid-template-columns: repeat(2, 1fr); }
+  .hp-topnav { padding: 0 20px; }
+  .hp-topnav-links { display: none; }
+  .hp-loc-split { grid-template-columns: 1fr; gap: 36px; padding: 56px 20px; }
+}
+@media (max-width: 600px) {
+  .hp-eeat-grid { grid-template-columns: 1fr; }
+  .hp-hero-inner { flex-direction: column; align-items: flex-start; padding: 60px 20px 52px; gap: 24px; }
+  .hp-hero-inner .hero-stats { margin-left: 0; }
+  .hp-specialties-intro { padding: 52px 20px 24px; }
+  .hp-topnav-logo .site-logo-sub { display: none; }
+  .hp-loc-map { aspect-ratio: 16 / 9; }
+}
+
+body > div.asw-container > div > a { margin-bottom: 30px; }
+</style>
+
+<!-- ── MINIMAL STICKY TOP NAV ── -->
+<header class="hp-topnav" role="banner">
+  <a href="/" class="hp-topnav-logo" aria-label="Sonrisa Dental Specialists — Home">
+    <div class="site-logo-circles">
+      <img src="/assets/images/logo.svg" alt="Sonrisa Dental Specialists logo">
+    </div>
+    <span class="site-logo-sub">dental specialists</span>
+  </a>
+  <nav class="hp-topnav-links" aria-label="Main navigation">
+    <a href="/dental-implants/">Dental Implants</a>
+    <a href="/orthodontics/">Orthodontics</a>
+    <a href="/dental-implants/privacy-policy/">Privacy Policy</a>
+    <a href="/dental-implants/terms-of-service/">Terms of Service</a>
+  </nav>
+  <a href="/dental-implants/survey.php" class="btn btn-primary">Book Appointment</a>
+</header>
+
+<!-- ── HERO ── -->
+<section class="hp-hero">
+  <div class="hp-hero-bg">
+    <img src="/assets/images/banner_img.jpg" alt="Sonrisa Dental Specialists — dentist office in Orlando, FL" draggable="false">
+  </div>
+  <div class="hp-hero-inner">
+    <div class="hp-hero-content">
+      <p class="hp-hero-eyebrow">Serving Lake Nona &amp; Oviedo, FL</p>
+      <h1>Dentist in Orlando, FL</h1>
+      <p class="hp-hero-sub">Comprehensive dental care for the whole family — routine cleanings, preventive exams, restorations, and more. Trusted specialists right here in Central Florida.</p>
+      <div class="hp-hero-ctas">
+        <a href="/dental-implants/survey.php" class="btn btn-primary btn-lg">Book Appointment</a>
+        <a href="tel:+14073591960" class="btn-phone">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i>&nbsp;(407) 359-1960
+        </a>
+      </div>
+    </div>
+    <?php include __DIR__ . '/includes/hero-stats-implants.php'; ?>
+  </div>
+</section>
+
+<?php include __DIR__ . '/includes/service-nav-implants.php'; ?>
+
+<!-- ── SPECIALTY NAVIGATION (2nd section) ── -->
+<div class="hp-specialties-intro">
+  <span class="section-label">Our Specialties</span>
+  <h2>Advanced Care When You Need It</h2>
+  <p>Beyond routine dentistry, our in-house specialists handle complex cases — no referrals, no runaround.</p>
+</div>
+
+<section class="gateway-split" aria-label="Choose your specialty">
+
+  <a href="/dental-implants/" class="gateway-half gateway-half-implants">
+    <div class="gateway-half-img">
+      <img src="/assets/images/specialty-implants.jpg" alt="Patient examining dental implant results" draggable="false">
+    </div>
+    <div class="gateway-half-overlay"></div>
+    <div class="gateway-half-body">
+      <span class="gateway-tag tag-blue">Implantology</span>
+      <h2 class="gateway-title">Dental Implants</h2>
+      <div class="gateway-reveal">
+        <p>Permanent, natural-looking tooth replacements. From single implants to complete full-arch restorations, all under one roof with dedicated implant specialists.</p>
+        <ul class="gateway-checklist checklist-white">
+          <li>Single, multiple &amp; full-arch options available</li>
+          <li>Same-day implant procedures offered</li>
+          <li>Titanium posts with custom porcelain crowns</li>
+          <li>Lifetime bone preservation &amp; aesthetics</li>
+        </ul>
+        <span class="btn btn-primary gateway-btn">Explore Dental Implants &rarr;</span>
+      </div>
+    </div>
+  </a>
+
+  <a href="/orthodontics/" class="gateway-half gateway-half-ortho">
+    <div class="gateway-half-img">
+      <img src="/assets/images/specialty-orthodontics.jpg" alt="Patient smiling with braces" draggable="false">
+    </div>
+    <div class="gateway-half-overlay"></div>
+    <div class="gateway-half-body">
+      <span class="gateway-tag tag-purple">Orthodontics</span>
+      <h2 class="gateway-title">Orthodontics</h2>
+      <div class="gateway-reveal">
+        <p>Straighter teeth and aligned bites for children, teens, and adults. Discreet and effective treatments designed around your lifestyle and goals.</p>
+        <ul class="gateway-checklist checklist-white">
+          <li>Invisalign&reg; certified Diamond Provider</li>
+          <li>Metal &amp; ceramic braces options</li>
+          <li>Early interceptive treatment</li>
+          <li>Retention planning &amp; long-term maintenance</li>
+        </ul>
+        <span class="btn btn-purple gateway-btn">Explore Orthodontics &rarr;</span>
+      </div>
+    </div>
+  </a>
+
+</section>
+
+<!-- ── E-E-A-T: ABOUT THE PRACTICE (3rd section) ── -->
+<section class="section hp-eeat">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Why Choose Sonrisa</span>
+      <h2>Board-Certified Specialists. Genuine Care.</h2>
+      <p class="section-sub">Our doctors bring decades of combined experience, advanced training, and a shared commitment to treating every patient like family.</p>
+    </div>
+    <div class="hp-eeat-grid">
+      <div class="hp-eeat-card">
+        <i class="fa-solid fa-graduation-cap hp-eeat-icon" aria-hidden="true"></i>
+        <h3>Advanced Credentials</h3>
+        <p>Our physicians hold board certifications in implantology and orthodontics, with specialty residencies well beyond standard dental training.</p>
+      </div>
+      <div class="hp-eeat-card">
+        <i class="fa-solid fa-star hp-eeat-icon" aria-hidden="true"></i>
+        <h3>5,000+ Patients Served</h3>
+        <p>Over a decade of transforming smiles across Central Florida, with a 4.9-star average patient rating and hundreds of five-star reviews.</p>
+      </div>
+      <div class="hp-eeat-card">
+        <i class="fa-solid fa-location-dot hp-eeat-icon" aria-hidden="true"></i>
+        <h3>Two Orlando-Area Offices</h3>
+        <p>Convenient locations in <strong>Lake Nona</strong> and <strong>Oviedo</strong>, with extended weekday hours and Saturday appointments available.</p>
+      </div>
+      <div class="hp-eeat-card">
+        <i class="fa-solid fa-language hp-eeat-icon" aria-hidden="true"></i>
+        <h3>Bilingual Team</h3>
+        <p>Our entire care team is fluent in English and Spanish, so every patient feels fully heard and comfortable at every visit.</p>
+      </div>
+    </div>
+    <div class="hp-eeat-cta">
+      <a href="/about/doctor/" class="btn btn-outline">Meet Our Doctors &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── LOCATION SIGNALS ── -->
+<section class="hp-locations">
+
+  <!-- Lake Nona: map left, content right -->
+  <div class="hp-loc-split">
+    <div class="hp-loc-map">
+      <iframe
+        src="https://maps.google.com/maps?q=10437+Moss+Park+Road+Suite+B+Orlando+FL+32832&output=embed&z=15"
+        allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Sonrisa — Lake Nona Office map">
+      </iframe>
+    </div>
+    <div class="hp-loc-content">
+      <span class="hp-loc-eyebrow">Location &middot; Lake Nona</span>
+      <h3>Your Lake Nona <span>Orthodontic Specialists.</span></h3>
+      <p class="hp-loc-desc">Our Lake Nona office is built around orthodontic care with a kid-friendly atmosphere for families. Board-certified orthodontists, bilingual staff, and pediatric dentistry coming soon.</p>
+      <div class="hp-loc-tags">
+        <span class="hp-loc-tag">Orthodontics</span>
+        <span class="hp-loc-tag">IV Sedation</span>
+        <span class="hp-loc-tag">Wisdom Teeth</span>
+        <span class="hp-loc-tag">Pediatrics Soon</span>
+      </div>
+      <ul class="hp-loc-checklist">
+        <li>Board-certified orthodontist on-site</li>
+        <li>Surgical extractions &amp; IV sedation available</li>
+        <li>Bilingual English &amp; Spanish support</li>
+      </ul>
+      <a href="/orthodontics/contact/lake-nona/" class="btn btn-primary btn-lg">Visit Our Lake Nona Office</a>
+    </div>
+  </div>
+
+  <!-- Oviedo: content left, map right -->
+  <div class="hp-loc-split">
+    <div class="hp-loc-content">
+      <span class="hp-loc-eyebrow">Location &middot; Oviedo</span>
+      <h3>Our Oviedo <span>Implant &amp; Surgery Center.</span></h3>
+      <p class="hp-loc-desc">Our Oviedo office is our flagship implant and oral surgery center. Full-arch restoration, All-On-X, complex reconstructive cases, plus general dentistry and orthodontics.</p>
+      <div class="hp-loc-tags">
+        <span class="hp-loc-tag">All-On-X</span>
+        <span class="hp-loc-tag">Oral Surgery</span>
+        <span class="hp-loc-tag">General Dentistry</span>
+        <span class="hp-loc-tag">Orthodontics</span>
+      </div>
+      <ul class="hp-loc-checklist">
+        <li>Flagship All-On-X and full-arch implant center</li>
+        <li>Board-certified oral surgeon with anesthesiology training</li>
+        <li>CBCT imaging &amp; 3D surgical planning on-site</li>
+      </ul>
+      <a href="/dental-implants/" class="btn btn-primary btn-lg">Visit Our Oviedo Office</a>
+    </div>
+    <div class="hp-loc-map">
+      <iframe
+        src="https://maps.google.com/maps?q=4250+Alafaya+Trail+Suite+180+Oviedo+FL+32765&output=embed&z=15"
+        allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Sonrisa — Oviedo Office map">
+      </iframe>
+    </div>
+  </div>
+
+</section>
+
+<?php include __DIR__ . '/includes/footer.php'; ?>
