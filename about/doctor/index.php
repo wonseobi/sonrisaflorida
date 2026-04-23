@@ -106,7 +106,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
 </section>
 
 <!-- ── CTA ── -->
-<section class="section doctor-cta-dark" style="background-image:url('/assets/images/meet-team-02.jpg');background-size:cover;background-position:center;">
+<section class="section doctor-cta-dark" style="background-image:url('/assets/images/about-hero.jpg');background-size:cover;background-position:center;">
   <div class="container">
     <span class="section-label doctor-cta-label">Ready to Get Started?</span>
     <h2 class="doctor-cta-heading">Meet the Doctor <span class="text-primary">In Person.</span></h2>
