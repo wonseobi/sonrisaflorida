@@ -186,6 +186,18 @@ body.page-home {
 }
 @media (max-width: 900px) {
   .hp-eeat-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .hp-loc-split .hp-loc-map { order: 2; }
+  .hp-loc-split .hp-loc-content { order: 1; }
+  .hp-topnav-cta { display: none !important; }
+  .hp-hamburger { display: flex !important; }
+}
+/* Let style.css handle gateway stacking at 768px — only reset the height override */
+@media (max-width: 768px) {
+  .gateway-split {
+    height: auto !important;
+    max-height: none !important;
+    min-height: 0 !important;
+  }
 }
 @media (max-width: 600px) {
   .hp-eeat-grid { grid-template-columns: 1fr !important; }
@@ -214,6 +226,69 @@ body.page-home {
   line-height: 1.6;
 }
 .hp-eeat-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ── Hamburger button ── */
+.hp-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 42px;
+  height: 42px;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 9px;
+  flex-shrink: 0;
+}
+.hp-hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+.hp-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hp-hamburger.open span:nth-child(2) { opacity: 0; }
+.hp-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── Mobile menu dropdown ── */
+.hp-mobile-menu {
+  display: none;
+  position: absolute;
+  top: 68px;
+  left: 0;
+  right: 0;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  padding: 20px 20px 28px;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 199;
+}
+.hp-mobile-menu.open { display: flex; }
+.hp-mobile-menu a.hp-mobile-link {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  display: block;
+}
+.hp-mobile-menu a.hp-mobile-link:hover { color: var(--primary); }
+.hp-mobile-menu .hp-mobile-cta {
+  margin-top: 16px;
+  width: 100%;
   text-align: center;
 }
 
@@ -334,7 +409,7 @@ body.page-home {
 }
 @media (max-width: 600px) {
   .hp-eeat-grid { grid-template-columns: 1fr; }
-  .hp-hero-inner { flex-direction: column; align-items: flex-start; padding: 60px 20px 52px; gap: 24px; }
+  .hp-hero-inner { flex-direction: column; align-items: flex-start; padding: 96px 20px 52px; gap: 24px; }
   .hp-hero-inner .hero-stats { margin-left: 0; }
   .hp-specialties-intro { padding: 52px 20px 24px; }
   .hp-topnav-logo .site-logo-sub { display: none; }
@@ -358,7 +433,17 @@ body > div.asw-container > div > a { margin-bottom: 30px; }
     <a href="/dental-implants/privacy-policy/">Privacy Policy</a>
     <a href="/dental-implants/terms-of-service/">Terms of Service</a>
   </nav>
-  <a href="/dental-implants/survey.php" class="btn btn-primary">Book Appointment</a>
+  <a href="/dental-implants/survey.php" class="btn btn-primary hp-topnav-cta">Book Appointment</a>
+  <button class="hp-hamburger" id="hpHamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="hp-mobile-menu" id="hpMobileMenu">
+    <a href="/dental-implants/" class="hp-mobile-link">Dental Implants</a>
+    <a href="/orthodontics/" class="hp-mobile-link">Orthodontics</a>
+    <a href="/dental-implants/privacy-policy/" class="hp-mobile-link">Privacy Policy</a>
+    <a href="/dental-implants/terms-of-service/" class="hp-mobile-link">Terms of Service</a>
+    <a href="/dental-implants/survey.php" class="btn btn-primary hp-mobile-cta">Book Appointment</a>
+  </div>
 </header>
 
 <!-- ── HERO ── -->
@@ -479,7 +564,7 @@ body > div.asw-container > div > a { margin-bottom: 30px; }
     </div>
     <div class="hp-eeat-cta">
       <a href="/dental-implants/survey.php" class="btn btn-primary btn-lg">Book Appointment</a>
-      <a href="tel:+14073591960" class="btn btn-outline btn-lg" style="margin-left:12px;"><i class="fa-solid fa-phone" aria-hidden="true"></i>&nbsp;(407) 359-1960</a>
+      <a href="tel:+14073591960" class="btn btn-outline btn-lg"><i class="fa-solid fa-phone" aria-hidden="true"></i>&nbsp;(407) 359-1960</a>
     </div>
   </div>
 </section>
@@ -547,4 +632,23 @@ body > div.asw-container > div > a { margin-bottom: 30px; }
 
 </section>
 
+<script>
+(function() {
+  var btn  = document.getElementById('hpHamburger');
+  var menu = document.getElementById('hpMobileMenu');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function() {
+    var isOpen = menu.classList.toggle('open');
+    btn.classList.toggle('open', isOpen);
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.hp-topnav')) {
+      menu.classList.remove('open');
+      btn.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+})();
+</script>
 <?php include __DIR__ . '/includes/footer.php'; ?>
