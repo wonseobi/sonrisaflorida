@@ -316,6 +316,60 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
   </div>
 </section>
 
+<!-- ── VISIT OUR OFFICES ── -->
+<section class="section" style="background:var(--bg-light);">
+  <div class="container">
+    <div class="section-header" style="text-align:center;margin-bottom:48px;">
+      <span class="section-label">Our Locations</span>
+      <h2>Visit Us in Lake Nona<br><span class="text-primary">or Oviedo.</span></h2>
+    </div>
+
+    <!-- Lake Nona -->
+    <div class="two-col two-col-map-row" style="margin-bottom:64px;">
+      <div class="two-col-text">
+        <span class="section-label">Location &middot; Lake Nona</span>
+        <h3 style="font-size:clamp(22px,2.5vw,32px);font-weight:800;color:var(--text);margin-bottom:12px;">Your Lake Nona <span class="text-primary">Orthodontic Specialists.</span></h3>
+        <p style="color:var(--text-muted);margin-bottom:20px;">Our Lake Nona office is built around orthodontic care with a kid-friendly atmosphere for families. Board-certified orthodontists and same-day consultations available.</p>
+        <ul class="experts-checklist" style="margin-bottom:24px;">
+          <li><i class="fa-solid fa-circle-check"></i> Board-certified orthodontist on-site</li>
+          <li><i class="fa-solid fa-circle-check"></i> Serving Lake Nona, Laureate Park &amp; Tavistock</li>
+          <li><i class="fa-solid fa-circle-check"></i> Saturday &amp; evening appointments available</li>
+        </ul>
+        <a href="/lake-nona/" class="btn btn-primary btn-lg">Visit Our Lake Nona Office</a>
+      </div>
+      <div class="two-col-map">
+        <iframe
+          src="https://maps.google.com/maps?q=10437+Moss+Park+Road+Suite+B+Orlando+FL+32832&output=embed&z=15"
+          width="100%" height="100%" style="border:0;min-height:360px;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" title="Sonrisa — Lake Nona Office">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Oviedo -->
+    <div class="two-col two-col-map-row" style="border-top:1px solid var(--border);padding-top:64px;">
+      <div class="two-col-map">
+        <iframe
+          src="https://maps.google.com/maps?q=4250+Alafaya+Trail+Suite+180+Oviedo+FL+32765&output=embed&z=15"
+          width="100%" height="100%" style="border:0;min-height:360px;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" title="Sonrisa — Oviedo Office">
+        </iframe>
+      </div>
+      <div class="two-col-text">
+        <span class="section-label">Location &middot; Oviedo</span>
+        <h3 style="font-size:clamp(22px,2.5vw,32px);font-weight:800;color:var(--text);margin-bottom:12px;">Our Oviedo <span class="text-primary">Office.</span></h3>
+        <p style="color:var(--text-muted);margin-bottom:20px;">Our Oviedo office offers a full range of orthodontic treatments alongside implants and oral surgery. Conveniently located on Alafaya Trail near UCF.</p>
+        <ul class="experts-checklist" style="margin-bottom:24px;">
+          <li><i class="fa-solid fa-circle-check"></i> Full orthodontic treatment menu</li>
+          <li><i class="fa-solid fa-circle-check"></i> Serving Oviedo, Alafaya &amp; east Orlando</li>
+          <li><i class="fa-solid fa-circle-check"></i> Free parking — wheelchair accessible</li>
+        </ul>
+        <a href="/oviedo/" class="btn btn-primary btn-lg">Visit Our Oviedo Office</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ── REVIEWS ── -->
 <section class="section reviews-section">
   <div class="container">

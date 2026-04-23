@@ -322,6 +322,32 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
   </div>
 </section>
 
+<!-- ── VISIT OVIEDO ── -->
+<section class="section" style="background:var(--bg-light);">
+  <div class="container">
+    <div class="two-col two-col-map-row">
+      <div class="two-col-text">
+        <span class="section-label">Location &middot; Oviedo</span>
+        <h2>Our Oviedo <span class="text-primary">Implant &amp; Surgery Center.</span></h2>
+        <p style="color:var(--text-muted);margin-bottom:20px;">Our Oviedo office is our flagship implant and oral surgery center. Full-arch restoration, All-On-X, complex reconstructive cases — performed by a board-certified oral surgeon with anesthesiology training.</p>
+        <ul class="experts-checklist" style="margin-bottom:24px;">
+          <li><i class="fa-solid fa-circle-check"></i> Flagship All-On-X and full-arch implant center</li>
+          <li><i class="fa-solid fa-circle-check"></i> Board-certified oral surgeon with anesthesiology training</li>
+          <li><i class="fa-solid fa-circle-check"></i> CBCT imaging &amp; 3D surgical planning on-site</li>
+        </ul>
+        <a href="/oviedo/" class="btn btn-primary btn-lg">Visit Our Oviedo Office</a>
+      </div>
+      <div class="two-col-map">
+        <iframe
+          src="https://maps.google.com/maps?q=4250+Alafaya+Trail+Suite+180+Oviedo+FL+32765&output=embed&z=15"
+          width="100%" height="100%" style="border:0;min-height:360px;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" title="Sonrisa — Oviedo Office">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ── REVIEWS ── -->
 <section class="section reviews-section">
   <div class="container">

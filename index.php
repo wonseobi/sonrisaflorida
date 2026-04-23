@@ -180,9 +180,15 @@ body.page-home {
 }
 .hp-eeat-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 22px;
   margin: 48px 0 36px;
+}
+@media (max-width: 900px) {
+  .hp-eeat-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 600px) {
+  .hp-eeat-grid { grid-template-columns: 1fr !important; }
 }
 .hp-eeat-card {
   background: var(--white);
@@ -436,33 +442,44 @@ body > div.asw-container > div > a { margin-bottom: 30px; }
   <div class="container">
     <div class="section-header">
       <span class="section-label">Why Choose Sonrisa</span>
-      <h2>Board-Certified Specialists. Genuine Care.</h2>
+      <h2>Why Choose Sonrisa Dental Specialists</h2>
       <p class="section-sub">Our doctors bring decades of combined experience, advanced training, and a shared commitment to treating every patient like family.</p>
     </div>
     <div class="hp-eeat-grid">
       <div class="hp-eeat-card">
-        <i class="fa-solid fa-graduation-cap hp-eeat-icon" aria-hidden="true"></i>
-        <h3>Advanced Credentials</h3>
-        <p>Our physicians hold board certifications in implantology and orthodontics, with specialty residencies well beyond standard dental training.</p>
+        <i class="fa-solid fa-trophy hp-eeat-icon" aria-hidden="true"></i>
+        <h3>Extensive Orthodontic Experience</h3>
+        <p>With over 30 years of clinical experience, our practice delivers orthodontic care grounded in precision, consistency, and proven results.</p>
       </div>
       <div class="hp-eeat-card">
-        <i class="fa-solid fa-star hp-eeat-icon" aria-hidden="true"></i>
-        <h3>5,000+ Patients Served</h3>
-        <p>Over a decade of transforming smiles across Central Florida, with a 4.9-star average patient rating and hundreds of five-star reviews.</p>
+        <i class="fa-solid fa-users hp-eeat-icon" aria-hidden="true"></i>
+        <h3>Over 20,000 Patients Treated</h3>
+        <p>Our team has successfully treated more than 20,000 patients, reflecting a long-standing commitment to excellence in orthodontic care.</p>
       </div>
       <div class="hp-eeat-card">
-        <i class="fa-solid fa-location-dot hp-eeat-icon" aria-hidden="true"></i>
-        <h3>Two Orlando-Area Offices</h3>
-        <p>Convenient locations in <strong>Lake Nona</strong> and <strong>Oviedo</strong>, with extended weekday hours and Saturday appointments available.</p>
+        <i class="fa-solid fa-microchip hp-eeat-icon" aria-hidden="true"></i>
+        <h3>Advanced Digital Technology</h3>
+        <p>We utilize modern 3D imaging and customized treatment systems to improve accuracy, efficiency, and overall patient outcomes.</p>
       </div>
       <div class="hp-eeat-card">
-        <i class="fa-solid fa-language hp-eeat-icon" aria-hidden="true"></i>
-        <h3>Bilingual Team</h3>
-        <p>Our entire care team is fluent in English and Spanish, so every patient feels fully heard and comfortable at every visit.</p>
+        <i class="fa-solid fa-calendar-check hp-eeat-icon" aria-hidden="true"></i>
+        <h3>Same-Day Treatment Options</h3>
+        <p>For qualified patients, treatment can begin on the same day as the initial consultation, reducing delays and streamlining the process.</p>
+      </div>
+      <div class="hp-eeat-card">
+        <i class="fa-solid fa-list-check hp-eeat-icon" aria-hidden="true"></i>
+        <h3>Comprehensive Treatment Solutions</h3>
+        <p>We offer a full range of orthodontic options, including braces and clear aligners, tailored to meet each patient's individual needs.</p>
+      </div>
+      <div class="hp-eeat-card">
+        <i class="fa-solid fa-mobile-screen-button hp-eeat-icon" aria-hidden="true"></i>
+        <h3>Remote Monitoring Capabilities</h3>
+        <p>Our virtual monitoring tools allow for convenient progress tracking, minimizing the need for frequent in-office visits while maintaining quality care.</p>
       </div>
     </div>
     <div class="hp-eeat-cta">
-      <a href="/about/doctor/" class="btn btn-outline">Meet Our Doctors &rarr;</a>
+      <a href="/dental-implants/survey.php" class="btn btn-primary btn-lg">Book Appointment</a>
+      <a href="tel:+14073591960" class="btn btn-outline btn-lg" style="margin-left:12px;"><i class="fa-solid fa-phone" aria-hidden="true"></i>&nbsp;(407) 359-1960</a>
     </div>
   </div>
 </section>
@@ -493,9 +510,9 @@ body > div.asw-container > div > a { margin-bottom: 30px; }
       <ul class="hp-loc-checklist">
         <li>Board-certified orthodontist on-site</li>
         <li>Surgical extractions &amp; IV sedation available</li>
-        <li>Bilingual English &amp; Spanish support</li>
+        <li>Saturday &amp; evening appointments available</li>
       </ul>
-      <a href="/orthodontics/contact/lake-nona/" class="btn btn-primary btn-lg">Visit Our Lake Nona Office</a>
+      <a href="/lake-nona/" class="btn btn-primary btn-lg">Visit Our Lake Nona Office</a>
     </div>
   </div>
 
@@ -516,7 +533,7 @@ body > div.asw-container > div > a { margin-bottom: 30px; }
         <li>Board-certified oral surgeon with anesthesiology training</li>
         <li>CBCT imaging &amp; 3D surgical planning on-site</li>
       </ul>
-      <a href="/dental-implants/" class="btn btn-primary btn-lg">Visit Our Oviedo Office</a>
+      <a href="/oviedo/" class="btn btn-primary btn-lg">Visit Our Oviedo Office</a>
     </div>
     <div class="hp-loc-map">
       <iframe
