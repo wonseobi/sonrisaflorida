@@ -575,7 +575,7 @@ body > div.asw-container > div > a { margin-bottom: 30px; }
     <div class="two-col">
 
       <div class="two-col-img">
-        <img src="/assets/images/about_us01.jpg" alt="Dr. David Lach — Orthodontic Specialist" draggable="false">
+        <img src="/assets/images/meet-dr-lach.jpg" alt="Dr. David Lach — Orthodontic Specialist" draggable="false">
       </div>
 
       <div class="two-col-text">
@@ -611,7 +611,7 @@ body > div.asw-container > div > a { margin-bottom: 30px; }
       </div>
 
       <div class="two-col-img">
-        <img src="/assets/images/about_us.jpg" alt="Sonrisa Dental Specialists team" draggable="false">
+        <img src="/assets/images/meet-the-team.jpg" alt="Sonrisa Dental Specialists team" draggable="false">
       </div>
 
     </div>

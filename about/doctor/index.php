@@ -31,7 +31,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
 
       <!-- Left: photo + quick credentials -->
       <div class="doctor-profile-left">
-        <div class="doctor-profile-photo">DR</div>
+        <div class="doctor-profile-photo">
+          <img src="/assets/images/dr-lach-page.jpg" alt="Dr. David Lach" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
+        </div>
         <div class="doctor-name-badge">
           <h2>Doctor #1</h2>
           <p class="doctor-specialty">Lead Specialist</p>
