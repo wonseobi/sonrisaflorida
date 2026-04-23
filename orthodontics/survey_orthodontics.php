@@ -141,8 +141,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                             <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                                 <div class="treatment-info">
-                                    <input type="radio" name="service_type" value="Lachalign">
-                                    <h5>Lachalign</h5>
+                                    <input type="radio" name="service_type" value="SonrisaAlign">
+                                    <h5>SonrisaAlign</h5>
                                 </div>
                             </div>
 

@@ -1,6 +1,6 @@
 <?php
 $page_title       = 'Meet Our Team | Sonrisa Dental Specialists';
-$page_description = 'Meet the dedicated team at Lach Dental Specialists — experienced clinical staff and patient coordinators committed to delivering exceptional orthodontic care in Lake Nona and Oviedo.';
+$page_description = 'Meet the dedicated team at Sonrisa Dental Specialists — experienced clinical staff and patient coordinators committed to delivering exceptional orthodontic care in Lake Nona and Oviedo.';
 $page_class       = 'page-team';
 include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
 ?>
@@ -60,7 +60,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
     <div class="team-prose-inner">
       <span class="section-label">Our Team</span>
       <h2>A Team Committed to <span>Exceptional Care</span></h2>
-      <p>At Lach Dental Specialists, our team is the foundation of every great patient experience. Each member of our staff is selected not only for their clinical expertise, but also for their professionalism, attention to detail, and commitment to patient care.</p>
+      <p>At Sonrisa Dental Specialists, our team is the foundation of every great patient experience. Each member of our staff is selected not only for their clinical expertise, but also for their professionalism, attention to detail, and commitment to patient care.</p>
       <p>From your first interaction to your final visit, our team works together to ensure every step of your experience is smooth, efficient, and comfortable.</p>
     </div>
 
@@ -76,7 +76,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
         <span class="section-label">Comprehensive Care</span>
         <h2>Focused on More Than <span>Just Straight Teeth</span></h2>
         <p>Our team understands that a great smile is about more than alignment alone. We take a comprehensive approach that considers overall facial balance, symmetry, and aesthetics.</p>
-        <p>By working closely with Dr. Lach, our team helps ensure that each treatment plan is tailored to enhance not only your smile, but your overall appearance and confidence.</p>
+        <p>By working closely with our doctor, our team helps ensure that each treatment plan is tailored to enhance not only your smile, but your overall appearance and confidence.</p>
       </div>
 
       <div class="team-split-img">

@@ -7,7 +7,7 @@
     <a href="/orthodontics/treatments/braces/color-braces/" class="service-nav-link">Color Braces</a>
     <a href="/orthodontics/treatments/aligners/invisalign-adults/" class="service-nav-link">Invisalign® Adults</a>
     <a href="/orthodontics/treatments/aligners/invisalign-teens/" class="service-nav-link">Invisalign® Teens</a>
-    <a href="/orthodontics/treatments/aligners/lachalign/" class="service-nav-link">Lachalign At Home</a>
+    <a href="/orthodontics/treatments/aligners/lachalign/" class="service-nav-link">SonrisaAlign At Home</a>
     <a href="/orthodontics/treatments/expanders/" class="service-nav-link">Expanders</a>
     <a href="/orthodontics/treatments/accelerated-treatment/" class="service-nav-link">Accelerated Treatment</a>
     <a href="/orthodontics/treatments/3d-digital-scan/" class="service-nav-link">3D Digital Scan</a>
@@ -21,7 +21,7 @@
     <a href="/orthodontics/treatments/braces/color-braces/" class="service-nav-link" aria-hidden="true">Color Braces</a>
     <a href="/orthodontics/treatments/aligners/invisalign-adults/" class="service-nav-link" aria-hidden="true">Invisalign® Adults</a>
     <a href="/orthodontics/treatments/aligners/invisalign-teens/" class="service-nav-link" aria-hidden="true">Invisalign® Teens</a>
-    <a href="/orthodontics/treatments/aligners/lachalign/" class="service-nav-link" aria-hidden="true">Lachalign At Home</a>
+    <a href="/orthodontics/treatments/aligners/lachalign/" class="service-nav-link" aria-hidden="true">SonrisaAlign At Home</a>
     <a href="/orthodontics/treatments/expanders/" class="service-nav-link" aria-hidden="true">Expanders</a>
     <a href="/orthodontics/treatments/accelerated-treatment/" class="service-nav-link" aria-hidden="true">Accelerated Treatment</a>
     <a href="/orthodontics/treatments/3d-digital-scan/" class="service-nav-link" aria-hidden="true">3D Digital Scan</a>
