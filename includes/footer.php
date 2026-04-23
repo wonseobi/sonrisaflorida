@@ -116,7 +116,7 @@
           <a href="https://lachorthodontics.tumblr.com/" target="_blank" rel="noopener" aria-label="Tumblr"><i class="fa-brands fa-tumblr"></i></a>
           <a href="https://www.pinterest.com/lachorthodontic/" target="_blank" rel="noopener" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
         </li>
-        <li class="footer-tagline-item" style="margin-top:20px;text-align:center;font-size:15px;font-style:italic;color:rgba(255,255,255,0.6);line-height:1.5;">"We are like the cardiologists of the mouth."</li>
+        <li class="footer-tagline-item" style="margin-top:20px;font-size:15px;font-style:italic;color:rgba(255,255,255,0.6);line-height:1.5;">"We are like the cardiologists of the mouth."</li>
       </ul>
     </div>
 

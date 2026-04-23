@@ -59,6 +59,16 @@
   @media (max-width: 900px) {
     .nav-dropdown-2col { column-count: 1; width: auto; }
   }
+  /* ── Homepage: ensure white header over dark hero ── */
+  .page-home .site-header {
+    background: #fff !important;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.08) !important;
+  }
+  /* ── Footer quote: center only on mobile ── */
+  .footer-tagline-item { text-align: left; }
+  @media (max-width: 768px) {
+    .footer-tagline-item { text-align: center !important; }
+  }
   </style>
 </head>
 <body class="<?php echo htmlspecialchars($page_class, ENT_QUOTES, 'UTF-8'); ?>">
@@ -142,9 +152,9 @@ function nav_cls($prefix) {
           <a href="/dental-implants/" class="nav-link">Dental Implants <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
           <ul class="nav-dropdown nav-dropdown-wide nav-dropdown-2col">
             <li class="nav-group-label">Implant Types</li>
-            <li><a href="/dental-implants/all-on-x/">All-on-X</a></li>
             <li><a href="/dental-implants/services/all-on-4/">All-on-4</a></li>
             <li><a href="/dental-implants/services/all-on-6/">All-on-6</a></li>
+            <li><a href="/dental-implants/all-on-x/">All-on-X</a></li>
             <li><a href="/dental-implants/services/single-tooth/">Single Tooth</a></li>
             <li><a href="/dental-implants/services/full-mouth-dental-implants/">Full Mouth</a></li>
             <li><a href="/dental-implants/services/zirconia/">Zirconia Implants</a></li>
@@ -192,7 +202,7 @@ function nav_cls($prefix) {
         </li>
 
         <li class="nav-item has-dropdown<?= nav_active('/orthodontics/success-stories') ? ' nav-item-active' : '' ?>">
-          <a href="javascript:void(0)" class="nav-link">Success Stories <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+          <a href="javascript:void(0)" class="nav-link">Stories <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
           <ul class="nav-dropdown">
             <li><a href="/orthodontics/success-stories/smile-gallery/">Smile Gallery</a></li>
             <li><a href="/orthodontics/success-stories/reviews/">Reviews</a></li>
@@ -218,7 +228,7 @@ function nav_cls($prefix) {
         </li>
 
       </ul>
-      <a href="/dental-implants/survey.php" class="btn btn-primary nav-cta">Book Consultation</a>
+      <a href="/dental-implants/survey.php" class="btn btn-primary nav-cta">Book Now</a>
       <?php endif; ?>
     </nav>
 
