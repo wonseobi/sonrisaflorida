@@ -80,7 +80,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
       </div>
 
       <div class="team-split-img">
-        <img src="/assets/images/meet-team-02.jpg" alt="Comprehensive orthodontic care at Sonrisa">
+        <img src="/assets/images/meet-team-01.jpg" alt="Comprehensive orthodontic care at Sonrisa">
       </div>
 
     </div>
