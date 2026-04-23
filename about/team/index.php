@@ -38,7 +38,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
 <!-- ── PAGE HERO ── -->
 <section class="hero hero-sm">
   <div class="hero-bg">
-    <img src="/assets/images/meet-the-team.jpg" alt="Sonrisa Dental Specialists team" draggable="false">
+    <img src="/assets/images/about-hero.jpg" alt="Sonrisa Dental Specialists team" draggable="false">
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-inner">
@@ -64,35 +64,6 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
       <p>From your first interaction to your final visit, our team works together to ensure every step of your experience is smooth, efficient, and comfortable.</p>
     </div>
 
-    <div class="team-image-block">
-      <img src="/assets/images/meet-the-team.jpg" alt="Lach Dental Specialists team">
-    </div>
-  </div>
-</section>
-
-<!-- ── APPROACH SPLIT ── -->
-<section class="section" style="background:var(--bg-light);padding:72px 0;">
-  <div class="container">
-    <div class="team-split">
-
-      <div class="team-split-img">
-        <img src="/assets/images/meet-team-01.jpg" alt="Sonrisa team caring for patients">
-      </div>
-
-      <div class="team-split-text">
-        <span class="section-label">Our Approach</span>
-        <h2>Our Approach to <span>Patient Care</span></h2>
-        <p>We believe that orthodontic treatment should be more than just effective — it should be a positive and rewarding experience. Our goal is to create an environment where patients feel welcomed, informed, and confident throughout their entire smile journey.</p>
-        <p>Every visit is designed to be:</p>
-        <ul>
-          <li>Organized and efficient</li>
-          <li>Clear and informative</li>
-          <li>Comfortable and supportive</li>
-        </ul>
-        <p>We take the time to listen, answer questions, and guide you through each stage of treatment so you always know what to expect.</p>
-      </div>
-
-    </div>
   </div>
 </section>
 

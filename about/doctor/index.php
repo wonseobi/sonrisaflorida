@@ -8,7 +8,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
 <!-- ── PAGE HERO ── -->
 <section class="hero hero-sm">
   <div class="hero-bg">
-    <img src="/assets/images/about_us01.jpg" alt="Sonrisa Dental Specialists office" draggable="false">
+    <img src="/assets/images/about-hero.jpg" alt="Sonrisa Dental Specialists office" draggable="false">
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-inner">
