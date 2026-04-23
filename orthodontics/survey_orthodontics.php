@@ -502,9 +502,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                     <div class="disclaimer-msg">
                         <p>
-                            <a href="/orthodontics/privacy-policy/" target="_blank">Privacy Policy</a>
+                            <a href="/privacy-policy/" target="_blank">Privacy Policy</a>
                             &nbsp;|&nbsp;
-                            <a href="/orthodontics/terms-of-service/" target="_blank">Terms of Service</a>
+                            <a href="/terms-of-service/" target="_blank">Terms of Service</a>
                         </p>
                     </div>
 

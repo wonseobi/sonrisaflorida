@@ -2,8 +2,6 @@
 $page_title       = 'Dentist in Orlando, FL | Sonrisa Dental Specialists';
 $page_description = 'Sonrisa Dental Specialists — comprehensive dental care in Orlando, FL. Serving Lake Nona and Oviedo with general dentistry, dental implants, and orthodontics. Call (407) 359-1960.';
 $page_class       = 'page-home';
-$hide_top_bar     = true;
-$hide_header      = true;
 include __DIR__ . '/includes/header.php';
 ?>
 
@@ -16,41 +14,6 @@ body.page-home {
 .page-home .site-footer {
   display: block !important;
   height: auto !important;
-}
-
-/* ── Minimal sticky top nav ── */
-.hp-topnav {
-  position: sticky;
-  top: 0;
-  z-index: 200;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 40px;
-  height: 68px;
-  background: var(--white);
-  border-bottom: 1px solid var(--border);
-  box-shadow: 0 1px 8px rgba(0,0,0,0.07);
-}
-.hp-topnav-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-}
-.hp-topnav-logo .site-logo-circles {
-  height: 28px;
-}
-.hp-topnav-logo .site-logo-circles img {
-  height: 46px;
-  width: auto;
-}
-.hp-topnav-logo .site-logo-sub {
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-muted);
 }
 
 /* ── HERO ── */
@@ -188,8 +151,6 @@ body.page-home {
   .hp-eeat-grid { grid-template-columns: repeat(2, 1fr) !important; }
   .hp-loc-split .hp-loc-map { order: 2; }
   .hp-loc-split .hp-loc-content { order: 1; }
-  .hp-topnav-cta { display: none !important; }
-  .hp-hamburger { display: flex !important; }
 }
 /* Let style.css handle gateway stacking at 768px — only reset the height override */
 @media (max-width: 768px) {
@@ -232,81 +193,6 @@ body.page-home {
   gap: 12px;
   flex-wrap: wrap;
 }
-
-/* ── Hamburger button ── */
-.hp-hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  width: 42px;
-  height: 42px;
-  background: none;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  cursor: pointer;
-  padding: 9px;
-  flex-shrink: 0;
-}
-.hp-hamburger span {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: var(--text);
-  border-radius: 2px;
-  transition: transform 0.2s, opacity 0.2s;
-}
-.hp-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.hp-hamburger.open span:nth-child(2) { opacity: 0; }
-.hp-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-/* ── Mobile menu dropdown ── */
-.hp-mobile-menu {
-  display: none;
-  position: absolute;
-  top: 68px;
-  left: 0;
-  right: 0;
-  background: var(--white);
-  border-bottom: 1px solid var(--border);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-  padding: 20px 20px 28px;
-  flex-direction: column;
-  gap: 8px;
-  z-index: 199;
-}
-.hp-mobile-menu.open { display: flex; }
-.hp-mobile-menu a.hp-mobile-link {
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--text);
-  text-decoration: none;
-  padding: 12px 0;
-  border-bottom: 1px solid var(--border);
-  display: block;
-}
-.hp-mobile-menu a.hp-mobile-link:hover { color: var(--primary); }
-.hp-mobile-menu .hp-mobile-cta {
-  margin-top: 16px;
-  width: 100%;
-  text-align: center;
-}
-
-/* ── Nav links ── */
-.hp-topnav-links {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-}
-.hp-topnav-links a {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text-muted);
-  text-decoration: none;
-  transition: color 0.2s;
-  white-space: nowrap;
-}
-.hp-topnav-links a:hover { color: var(--primary); }
 
 /* ── Locations split layout ── */
 .hp-locations { background: var(--bg-light); }
@@ -398,13 +284,8 @@ body.page-home {
 }
 
 /* ── Responsive ── */
-@media (max-width: 1024px) {
-  .hp-topnav-links { gap: 18px; }
-}
 @media (max-width: 900px) {
   .hp-eeat-grid { grid-template-columns: repeat(2, 1fr); }
-  .hp-topnav { padding: 0 20px; }
-  .hp-topnav-links { display: none; }
   .hp-loc-split { grid-template-columns: 1fr; gap: 36px; padding: 56px 20px; }
 }
 @media (max-width: 600px) {
@@ -412,39 +293,11 @@ body.page-home {
   .hp-hero-inner { flex-direction: column; align-items: flex-start; padding: 96px 20px 52px; gap: 24px; }
   .hp-hero-inner .hero-stats { margin-left: 0; }
   .hp-specialties-intro { padding: 52px 20px 24px; }
-  .hp-topnav-logo .site-logo-sub { display: none; }
   .hp-loc-map { aspect-ratio: 16 / 9; }
 }
 
 body > div.asw-container > div > a { margin-bottom: 30px; }
 </style>
-
-<!-- ── MINIMAL STICKY TOP NAV ── -->
-<header class="hp-topnav" role="banner">
-  <a href="/" class="hp-topnav-logo" aria-label="Sonrisa Dental Specialists — Home">
-    <div class="site-logo-circles">
-      <img src="/assets/images/logo.svg" alt="Sonrisa Dental Specialists logo">
-    </div>
-    <span class="site-logo-sub">dental specialists</span>
-  </a>
-  <nav class="hp-topnav-links" aria-label="Main navigation">
-    <a href="/dental-implants/">Dental Implants</a>
-    <a href="/orthodontics/">Orthodontics</a>
-    <a href="/dental-implants/privacy-policy/">Privacy Policy</a>
-    <a href="/dental-implants/terms-of-service/">Terms of Service</a>
-  </nav>
-  <a href="/dental-implants/survey.php" class="btn btn-primary hp-topnav-cta">Book Appointment</a>
-  <button class="hp-hamburger" id="hpHamburger" aria-label="Open menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-  <div class="hp-mobile-menu" id="hpMobileMenu">
-    <a href="/dental-implants/" class="hp-mobile-link">Dental Implants</a>
-    <a href="/orthodontics/" class="hp-mobile-link">Orthodontics</a>
-    <a href="/dental-implants/privacy-policy/" class="hp-mobile-link">Privacy Policy</a>
-    <a href="/dental-implants/terms-of-service/" class="hp-mobile-link">Terms of Service</a>
-    <a href="/dental-implants/survey.php" class="btn btn-primary hp-mobile-cta">Book Appointment</a>
-  </div>
-</header>
 
 <!-- ── HERO ── -->
 <section class="hp-hero">
@@ -681,23 +534,4 @@ body > div.asw-container > div > a { margin-bottom: 30px; }
 
 </section>
 
-<script>
-(function() {
-  var btn  = document.getElementById('hpHamburger');
-  var menu = document.getElementById('hpMobileMenu');
-  if (!btn || !menu) return;
-  btn.addEventListener('click', function() {
-    var isOpen = menu.classList.toggle('open');
-    btn.classList.toggle('open', isOpen);
-    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-  });
-  document.addEventListener('click', function(e) {
-    if (!e.target.closest('.hp-topnav')) {
-      menu.classList.remove('open');
-      btn.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false');
-    }
-  });
-})();
-</script>
 <?php include __DIR__ . '/includes/footer.php'; ?>

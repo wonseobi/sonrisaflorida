@@ -88,8 +88,8 @@
     <div class="footer-col">
       <h3 class="footer-heading">Company</h3>
       <ul class="footer-links">
-        <li><a href="/dental-implants/privacy-policy/">Privacy Policy</a></li>
-        <li><a href="/dental-implants/terms-of-service/">Terms of Service</a></li>
+        <li><a href="/privacy-policy/">Privacy Policy</a></li>
+        <li><a href="/terms-of-service/">Terms of Service</a></li>
       </ul>
     </div>
 
@@ -126,15 +126,8 @@
     <div class="container footer-bottom-inner">
       <p>&copy; <?php echo date('Y'); ?> Sonrisa Dental Specialists. All rights reserved.</p>
       <ul class="footer-legal">
-        <?php
-          if (!empty($nav_type) && $nav_type === 'orthodontics') {
-            $legal_base = '/orthodontics';
-          } else {
-            $legal_base = '/dental-implants';
-          }
-        ?>
-        <li><a href="<?= $legal_base ?>/privacy-policy/">Privacy Policy</a></li>
-        <li><a href="<?= $legal_base ?>/terms-of-service/">Terms of Service</a></li>
+        <li><a href="/privacy-policy/">Privacy Policy</a></li>
+        <li><a href="/terms-of-service/">Terms of Service</a></li>
       </ul>
     </div>
   </div>

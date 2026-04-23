@@ -31,6 +31,35 @@
 
   <!-- Accessibility Widget -->
   <script src="https://cdn.jsdelivr.net/npm/sienna-accessibility@latest/dist/sienna-accessibility.umd.js" defer></script>
+
+  <style>
+  /* ── Universal nav — missing pages (red) ── */
+  a.nav-missing { color: #e53e3e !important; }
+  a.nav-missing:hover { color: #c53030 !important; }
+  /* ── 2-column dropdown ── */
+  .nav-dropdown-2col {
+    column-count: 2;
+    column-gap: 0;
+    width: 440px;
+  }
+  .nav-group-label {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted, #6b7280);
+    padding: 8px 16px 4px;
+    display: block;
+    border-bottom: 1px solid var(--border, #e5e7eb);
+    margin-bottom: 2px;
+    break-after: avoid;
+    pointer-events: none;
+  }
+  .nav-group-col2 { break-before: column; }
+  @media (max-width: 900px) {
+    .nav-dropdown-2col { column-count: 1; width: auto; }
+  }
+  </style>
 </head>
 <body class="<?php echo htmlspecialchars($page_class, ENT_QUOTES, 'UTF-8'); ?>">
 
@@ -75,199 +104,121 @@ function nav_cls($prefix) {
 
     <nav class="site-nav" aria-label="Main navigation">
       <?php if (empty($hide_nav_links)): ?>
-
-      <?php if (!empty($nav_type) && $nav_type === 'dental-implants'): ?>
-      <!-- ── DENTAL IMPLANTS NAV ── -->
+      <!-- ── UNIVERSAL NAV ── -->
       <ul class="nav-list">
 
-        <li class="nav-item<?= $_nav_path === '/dental-implants/' ? ' nav-item-active' : '' ?>">
-          <a href="/dental-implants/" class="nav-link">Home</a>
-        </li>
-
-        <li class="nav-item has-dropdown<?= strpos($_nav_path, '/dental-implants/about') === 0 ? ' nav-item-active' : '' ?>">
-          <a href="javascript:void(0)" class="nav-link">About <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+        <li class="nav-item has-dropdown<?= (nav_active('/lake-nona') || nav_active('/oviedo')) ? ' nav-item-active' : '' ?>">
+          <a href="javascript:void(0)" class="nav-link">Locations <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
           <ul class="nav-dropdown">
-            <li><a href="/dental-implants/about/our-practice/">Our Practice</a></li>
-            <li><a href="/dental-implants/about/meet-the-doctor/">Meet the Doctor</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item<?= strpos($_nav_path, '/dental-implants/technology') === 0 ? ' nav-item-active' : '' ?>">
-          <a href="/dental-implants/technology/" class="nav-link">Technology</a>
-        </li>
-
-        <li class="nav-item has-dropdown<?= strpos($_nav_path, '/dental-implants/services') === 0 ? ' nav-item-active' : '' ?>">
-          <a href="javascript:void(0)" class="nav-link">Services <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
-          <ul class="nav-dropdown nav-dropdown-wide">
-            <li><a href="/dental-implants/services/dental-implants/">Dental Implants</a></li>
-            <li><a href="/dental-implants/services/full-mouth-dental-implants/">Full Mouth Dental Implants</a></li>
-            <li><a href="/dental-implants/services/all-on-4/">All-on-4 Dental Implants</a></li>
-            <li><a href="/dental-implants/services/all-on-6/">All-on-6 Dental Implants</a></li>
-            <li><a href="/dental-implants/services/same-day/">Same-Day Dental Implants</a></li>
-            <li><a href="/dental-implants/services/implant-supported-dentures/">Implant-Supported Dentures</a></li>
-            <li><a href="/dental-implants/services/snap-in-dentures/">Snap-In Dentures</a></li>
-            <li><a href="/dental-implants/services/zirconia/">Zirconia Dental Implants</a></li>
-            <li><a href="/dental-implants/services/single-tooth/">Single Tooth Dental Implants</a></li>
-            <li><a href="/dental-implants/services/multiple/">Multiple Dental Implants</a></li>
-            <li><a href="/dental-implants/services/restoration/">Dental Implant Restoration</a></li>
-            <li><a href="/dental-implants/services/bone-grafting/">Bone Grafting for Implants</a></li>
-            <li><a href="/dental-implants/services/sinus-lift/">Sinus Lift Surgery</a></li>
-            <li><a href="/dental-implants/services/maintenance/">Implant Maintenance</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item has-dropdown<?= strpos($_nav_path, '/dental-implants/conditions') === 0 ? ' nav-item-active' : '' ?>">
-          <a href="javascript:void(0)" class="nav-link">Conditions <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
-          <ul class="nav-dropdown">
-            <li><a href="/dental-implants/conditions/missing-teeth/">Missing Teeth Solutions</a></li>
-            <li><a href="/dental-implants/conditions/replace-missing-teeth/">Replace Missing Teeth</a></li>
-            <li><a href="/dental-implants/conditions/dentures-vs-implants/">Dentures vs. Dental Implants</a></li>
-            <li><a href="/dental-implants/conditions/loose-dentures/">Loose Dentures Solutions</a></li>
-            <li><a href="/dental-implants/conditions/failing-implants/">Broken or Failing Dental Implants</a></li>
-            <li><a href="/dental-implants/conditions/teeth-in-a-day/">Teeth in a Day</a></li>
-            <li><a href="/dental-implants/conditions/permanent-replacement/">Permanent Teeth Replacement</a></li>
-            <li><a href="/dental-implants/conditions/alternative-to-dentures/">Best Alternative to Dentures</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item has-dropdown<?= strpos($_nav_path, '/dental-implants/dental-emergencies') === 0 ? ' nav-item-active' : '' ?>">
-          <a href="/dental-implants/dental-emergencies/" class="nav-link">Dental Emergencies <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
-          <ul class="nav-dropdown">
-            <li><a href="/dental-implants/dental-emergencies/">Emergency Care</a></li>
-            <li><a href="/dental-implants/dental-emergencies/ailing-failing-implants/">Ailing &amp; Failing Implants</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item<?= strpos($_nav_path, '/dental-implants/financing') === 0 ? ' nav-item-active' : '' ?>">
-          <a href="/dental-implants/financing/" class="nav-link">Financing &amp; Insurance</a>
-        </li>
-
-        <li class="nav-item<?= strpos($_nav_path, '/dental-implants/referrals') === 0 ? ' nav-item-active' : '' ?>">
-          <a href="/dental-implants/referrals/" class="nav-link">Referrals</a>
-        </li>
-
-      </ul>
-      <a href="/dental-implants/survey.php" class="btn btn-primary nav-cta">Book Consultation</a>
-
-      <?php elseif (!empty($nav_type) && $nav_type === 'orthodontics'): ?>
-      <!-- ── ORTHODONTICS NAV ── -->
-      <ul class="nav-list">
-
-        <li class="nav-item<?= $_nav_path === '/orthodontics/' ? ' nav-item-active' : '' ?>">
-          <a href="/orthodontics/" class="nav-link">Home</a>
-        </li>
-
-        <li class="nav-item has-dropdown<?= strpos($_nav_path, '/orthodontics/about') === 0 ? ' nav-item-active' : '' ?>">
-          <a href="javascript:void(0)" class="nav-link">About Us <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
-          <ul class="nav-dropdown">
-            <li><a href="/orthodontics/about/meet-the-team/">Meet the Team</a></li>
-            <li><a href="/orthodontics/about/our-costs/">Our Costs</a></li>
-            <li><a href="/orthodontics/about/virtual-office-tour/">Virtual Office Tour</a></li>
-            <li><a href="/orthodontics/about/blog/">Blog</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item has-dropdown<?= strpos($_nav_path, '/orthodontics/new-patients') === 0 ? ' nav-item-active' : '' ?>">
-          <a href="javascript:void(0)" class="nav-link">New Patients <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
-          <ul class="nav-dropdown">
-            <li><a href="/orthodontics/new-patients/free-consultation/">Free In-Office Consultation</a></li>
-            <li><a href="/orthodontics/new-patients/digital-consultation/">Free Digital Consultation</a></li>
-            <li><a href="/orthodontics/new-patients/verify-insurance/">Verify My Insurance</a></li>
-            <li><a href="/orthodontics/new-patients/orthodontist-vs-dentist/">Orthodontist vs Dentist</a></li>
-            <li><a href="/orthodontics/new-patients/patient-forms/">Patient Forms</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item has-dropdown<?= strpos($_nav_path, '/orthodontics/treatments') === 0 ? ' nav-item-active' : '' ?>">
-          <a href="javascript:void(0)" class="nav-link">Treatments <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
-          <ul class="nav-dropdown nav-dropdown-wide">
-            <li><a href="/orthodontics/treatments/braces/">Braces</a></li>
-            <li><a href="/orthodontics/treatments/braces/types/">Types of Braces</a></li>
-            <li><a href="/orthodontics/treatments/braces/3d-computer-designed/">3D Computer Designed Braces</a></li>
-            <li><a href="/orthodontics/treatments/braces/color-braces/">Color Braces for Teeth</a></li>
-            <li><a href="/orthodontics/treatments/braces/vs-lingual/">Braces vs Lingual Braces Cost</a></li>
-            <li><a href="/orthodontics/treatments/aligners/invisalign-adults/">Invisalign® for Adults</a></li>
-            <li><a href="/orthodontics/treatments/aligners/invisalign-teens/">Invisalign® for Teens</a></li>
-            <li><a href="/orthodontics/treatments/aligners/lachalign/">Lachalign At Home</a></li>
-            <li><a href="/orthodontics/treatments/expanders/">Expanders</a></li>
-            <li><a href="/orthodontics/treatments/accelerated-treatment/">Accelerated Treatment</a></li>
-            <li><a href="/orthodontics/treatments/3d-digital-scan/">Precision 3D Digital Scan</a></li>
-            <li><a href="/orthodontics/treatments/sleep-apnea-tmj/">Sleep Apnea &amp; TMJ</a></li>
-            <li><a href="/orthodontics/treatments/smile-makeover/">Smile Makeover</a></li>
-            <li><a href="/orthodontics/treatments/teeth-whitening/">Teeth Whitening</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item has-dropdown<?= strpos($_nav_path, '/orthodontics/active-patients') === 0 ? ' nav-item-active' : '' ?>">
-          <a href="javascript:void(0)" class="nav-link">Active Patients <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
-          <ul class="nav-dropdown">
-            <li><a href="/orthodontics/active-patients/virtual-appointments/">Virtual Appointments</a></li>
-            <li><a href="/orthodontics/active-patients/faqs/">Orthodontic FAQs</a></li>
-            <li><a href="/orthodontics/active-patients/emergency/">Emergency Information</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item has-dropdown<?= strpos($_nav_path, '/orthodontics/success-stories') === 0 ? ' nav-item-active' : '' ?>">
-          <a href="javascript:void(0)" class="nav-link">Success Stories <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
-          <ul class="nav-dropdown">
-            <li><a href="/orthodontics/success-stories/smile-gallery/">Smile Gallery</a></li>
-            <li><a href="/orthodontics/success-stories/reviews/">Reviews</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item has-dropdown<?= strpos($_nav_path, '/orthodontics/contact') === 0 ? ' nav-item-active' : '' ?>">
-          <a href="javascript:void(0)" class="nav-link">Contact Us <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
-          <ul class="nav-dropdown">
-            <li><a href="/orthodontics/contact/oviedo/">Oviedo Office</a></li>
-            <li><a href="/orthodontics/contact/lake-nona/">Lake Nona Office</a></li>
-          </ul>
-        </li>
-
-      </ul>
-      <a href="/orthodontics/survey_orthodontics.php" class="btn btn-primary nav-cta">Book Consultation</a>
-
-      <?php else: ?>
-      <!-- ── DEFAULT NAV ── -->
-      <ul class="nav-list">
-
-        <li class="nav-item has-dropdown<?= nav_active('/about') ? ' nav-item-active' : '' ?>">
-          <a href="javascript:void(0)" class="nav-link<?= nav_cls('/about') ?>">About Us <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
-          <ul class="nav-dropdown">
-            <li><a href="/about/team/">Meet Our Team</a></li>
-            <li><a href="/about/doctor/">Meet the Dr.</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item has-dropdown<?= nav_active('/dental-implants') ? ' nav-item-active' : '' ?>">
-          <a href="/dental-implants/" class="nav-link<?= nav_cls('/dental-implants') ?>">Dental Implants <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
-          <ul class="nav-dropdown">
-            <li><a href="/dental-implants/single-tooth/">Single Tooth Implant</a></li>
-            <li><a href="/dental-implants/implant-bridge/">Implant-Supported Bridge</a></li>
-            <li><a href="/dental-implants/full-arch/">Full Arch Dental Implants</a></li>
-            <li><a href="/dental-implants/all-on-x/">All-on-X Dental Implants</a></li>
-            <li><a href="/dental-implants/same-day/">Same-Day Dental Implants</a></li>
-            <li><a href="/dental-implants/implant-supported-dentures/">Implant-Supported Dentures</a></li>
+            <li><a href="/lake-nona/">Lake Nona</a></li>
+            <li><a href="/oviedo/">Oviedo</a></li>
           </ul>
         </li>
 
         <li class="nav-item has-dropdown<?= nav_active('/orthodontics') ? ' nav-item-active' : '' ?>">
-          <a href="/orthodontics/" class="nav-link<?= nav_cls('/orthodontics') ?>">Orthodontics <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
-          <ul class="nav-dropdown">
-            <li><a href="/orthodontics/invisalign/">Invisalign</a></li>
-            <li><a href="/orthodontics/clear-aligners/">Clear Aligners</a></li>
-            <li><a href="/orthodontics/braces/">Braces</a></li>
+          <a href="/orthodontics/" class="nav-link">Orthodontics <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+          <ul class="nav-dropdown nav-dropdown-wide nav-dropdown-2col">
+            <li class="nav-group-label">Braces</li>
+            <li><a href="/orthodontics/treatments/braces/">Braces</a></li>
+            <li><a href="/orthodontics/treatments/metal-braces/">Metal Braces</a></li>
+            <li><a href="/orthodontics/treatments/ceramic-braces/">Ceramic Braces</a></li>
+            <li><a href="/orthodontics/treatments/lingual-braces/">Lingual Braces</a></li>
+            <li><a href="/orthodontics/treatments/self-ligating-braces/">Self-Ligating Braces</a></li>
+            <li><a href="#" class="nav-missing">Braces for Kids</a></li>
+            <li><a href="#" class="nav-missing">Braces for Teens</a></li>
+            <li><a href="#" class="nav-missing">Braces for Adults</a></li>
+            <li class="nav-group-label nav-group-col2">Aligners &amp; More</li>
+            <li><a href="/orthodontics/treatments/invisalign/">Invisalign&reg;</a></li>
+            <li><a href="/orthodontics/treatments/aligners/invisalign-adults/">Invisalign for Adults</a></li>
+            <li><a href="/orthodontics/treatments/aligners/invisalign-teens/">Invisalign for Teens</a></li>
+            <li><a href="/orthodontics/treatments/clear-aligners/">Clear Aligners</a></li>
+            <li><a href="#" class="nav-missing">Retainers</a></li>
+            <li><a href="/orthodontics/treatments/palate-expanders/">Palate Expanders</a></li>
+            <li><a href="/orthodontics/treatments/accelerated-orthodontics/">Accelerated Orthodontics</a></li>
           </ul>
         </li>
 
-        <li class="nav-item"><a href="/our-advantage/" class="nav-link<?= nav_cls('/our-advantage') ?>">Our Advantage</a></li>
-        <li class="nav-item"><a href="/your-options/" class="nav-link<?= nav_cls('/your-options') ?>">Your Options</a></li>
-        <li class="nav-item"><a href="/pricing/" class="nav-link<?= nav_cls('/pricing') ?>">Pricing</a></li>
-        <li class="nav-item"><a href="/smile-gallery/" class="nav-link<?= nav_cls('/smile-gallery') ?>">Smile Gallery</a></li>
+        <li class="nav-item has-dropdown<?= nav_active('/dental-implants') ? ' nav-item-active' : '' ?>">
+          <a href="/dental-implants/" class="nav-link">Dental Implants <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+          <ul class="nav-dropdown nav-dropdown-wide nav-dropdown-2col">
+            <li class="nav-group-label">Implant Types</li>
+            <li><a href="/dental-implants/all-on-x/">All-on-X</a></li>
+            <li><a href="/dental-implants/services/all-on-4/">All-on-4</a></li>
+            <li><a href="/dental-implants/services/all-on-6/">All-on-6</a></li>
+            <li><a href="/dental-implants/services/single-tooth/">Single Tooth</a></li>
+            <li><a href="/dental-implants/services/full-mouth-dental-implants/">Full Mouth</a></li>
+            <li><a href="/dental-implants/services/zirconia/">Zirconia Implants</a></li>
+            <li><a href="/dental-implants/services/same-day/">Same Day Implants</a></li>
+            <li><a href="/dental-implants/services/implant-supported-dentures/">Implant-Supported Dentures</a></li>
+            <li class="nav-group-label nav-group-col2">Procedures &amp; More</li>
+            <li><a href="/dental-implants/services/snap-in-dentures/">Snap-In Dentures</a></li>
+            <li><a href="/dental-implants/services/bone-grafting/">Bone Grafting</a></li>
+            <li><a href="/dental-implants/services/sinus-lift/">Sinus Lift</a></li>
+            <li><a href="/dental-implants/conditions/failing-implants/">Failing Implants</a></li>
+            <li><a href="/dental-implants/services/maintenance/">Implant Maintenance</a></li>
+            <li><a href="/dental-implants/services/periodontics/lanap/">LANAP</a></li>
+            <li><a href="/dental-implants/financing/">Financing &amp; Insurance</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item has-dropdown">
+          <a href="javascript:void(0)" class="nav-link">Oral Surgery <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+          <ul class="nav-dropdown">
+            <li><a href="#" class="nav-missing">Wisdom Teeth</a></li>
+            <li><a href="#" class="nav-missing">IV Sedation</a></li>
+            <li><a href="#" class="nav-missing">Tooth Extractions</a></li>
+            <li><a href="#" class="nav-missing">Surgical Extractions</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item has-dropdown<?= nav_active('/orthodontics/new-patients') ? ' nav-item-active' : '' ?>">
+          <a href="javascript:void(0)" class="nav-link">New Patients <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+          <ul class="nav-dropdown">
+            <li><a href="/orthodontics/new-patients/free-consultation/">Free In-Office Consultation</a></li>
+            <li><a href="/orthodontics/new-patients/digital-consultation/">Free Digital Consultation</a></li>
+            <li><a href="/orthodontics/new-patients/verify-insurance/">Verify Insurance</a></li>
+            <li><a href="/orthodontics/new-patients/patient-forms/">Patient Forms</a></li>
+            <li><a href="/dental-implants/financing/">Insurance &amp; Financing</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item has-dropdown<?= nav_active('/orthodontics/active-patients') ? ' nav-item-active' : '' ?>">
+          <a href="javascript:void(0)" class="nav-link">Active Patients <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+          <ul class="nav-dropdown">
+            <li><a href="/orthodontics/active-patients/virtual-appointments/">Virtual Appointments</a></li>
+            <li><a href="/orthodontics/active-patients/faqs/">FAQs</a></li>
+            <li><a href="/orthodontics/active-patients/emergency/">Emergency Information</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item has-dropdown<?= nav_active('/orthodontics/success-stories') ? ' nav-item-active' : '' ?>">
+          <a href="javascript:void(0)" class="nav-link">Success Stories <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+          <ul class="nav-dropdown">
+            <li><a href="/orthodontics/success-stories/smile-gallery/">Smile Gallery</a></li>
+            <li><a href="/orthodontics/success-stories/reviews/">Reviews</a></li>
+            <li><a href="/orthodontics/success-stories/before-after/">Before &amp; After</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item has-dropdown<?= nav_active('/about') ? ' nav-item-active' : '' ?>">
+          <a href="javascript:void(0)" class="nav-link">About <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+          <ul class="nav-dropdown">
+            <li><a href="/about/team/">Meet the Team</a></li>
+            <li><a href="/orthodontics/about/our-costs/">Our Costs</a></li>
+            <li><a href="/orthodontics/about/blog/">Blog</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item has-dropdown">
+          <a href="javascript:void(0)" class="nav-link">Contact <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+          <ul class="nav-dropdown">
+            <li><a href="/lake-nona/">Lake Nona Office</a></li>
+            <li><a href="/oviedo/">Oviedo Office</a></li>
+          </ul>
+        </li>
 
       </ul>
-      <a href="/dental-implants/survey.php" class="btn btn-primary nav-cta">Book Appointment</a>
-      <?php endif; ?>
-
+      <a href="/dental-implants/survey.php" class="btn btn-primary nav-cta">Book Consultation</a>
       <?php endif; ?>
     </nav>
 
