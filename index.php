@@ -569,6 +569,55 @@ body > div.asw-container > div > a { margin-bottom: 30px; }
   </div>
 </section>
 
+<!-- ── MEET THE DOCTOR ── -->
+<section class="section experts-section">
+  <div class="container">
+    <div class="two-col">
+
+      <div class="two-col-img">
+        <img src="/assets/images/about_us01.jpg" alt="Dr. David Lach — Orthodontic Specialist" draggable="false">
+      </div>
+
+      <div class="two-col-text">
+        <span class="section-label">Meet the Doctor</span>
+        <h2>Dr. David Lach<br><span class="text-primary">Orthodontic Specialist</span></h2>
+        <p>Dr. David Lach is a highly experienced orthodontic specialist with over 30 years of clinical expertise serving the Orlando community. Throughout his career, he has helped transform more than 20,000 smiles, combining advanced orthodontic techniques with a patient-first approach.</p>
+        <p>He earned his dental degree from the University of North Carolina at Chapel Hill, graduating at the top of his class, and went on to complete a Master's Degree in Oral Biology from the University of Louisville. In addition to leading his practice, Dr. Lach contributes to the field as an Assistant Professor at the University of Florida College of Dentistry.</p>
+        <ul class="experts-checklist">
+          <li><i class="fa-solid fa-circle-check"></i> 30+ Years of Clinical Experience</li>
+          <li><i class="fa-solid fa-circle-check"></i> 20,000+ Smiles Transformed</li>
+          <li><i class="fa-solid fa-circle-check"></i> UNC Chapel Hill &amp; University of Louisville</li>
+          <li><i class="fa-solid fa-circle-check"></i> Assistant Professor, UF College of Dentistry</li>
+        </ul>
+        <a href="/about/doctor/" class="btn btn-primary">Learn More About Dr. Lach</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── MEET THE TEAM ── -->
+<section class="section" style="background:var(--bg-light);">
+  <div class="container">
+    <div class="two-col">
+
+      <div class="two-col-text">
+        <span class="section-label">Meet the Team</span>
+        <h2>A Dedicated Team<br><span class="text-primary">Focused on Your Experience.</span></h2>
+        <p>At Lach Dental Specialists, our team plays a vital role in delivering a seamless and positive patient experience. From your first interaction to the completion of your treatment, every team member is committed to providing attentive, professional, and personalized care.</p>
+        <p>Our clinical and administrative staff are highly trained in orthodontic procedures, patient coordination, and modern treatment technologies. They work closely with Dr. Lach to ensure each patient receives clear communication, efficient visits, and consistent support throughout their smile journey.</p>
+        <p>Together, we are dedicated to delivering high-quality orthodontic care while building lasting relationships with the patients and families we serve.</p>
+        <a href="/about/team/" class="btn btn-primary">Meet the Team</a>
+      </div>
+
+      <div class="two-col-img">
+        <img src="/assets/images/about_us.jpg" alt="Sonrisa Dental Specialists team" draggable="false">
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ── LOCATION SIGNALS ── -->
 <section class="hp-locations">
 
