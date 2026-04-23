@@ -36,34 +36,74 @@
   /* ── Universal nav — missing pages (red) ── */
   a.nav-missing { color: #e53e3e !important; }
   a.nav-missing:hover { color: #c53030 !important; }
-  /* ── 2-column dropdown ── */
-  .nav-dropdown-2col {
-    column-count: 2;
-    column-gap: 0;
-    width: 440px;
+
+  /* ── 2-column dropdown: flex approach for guaranteed top-to-bottom order ── */
+  ul.nav-dropdown-2col {
+    display: flex !important;
+    flex-direction: row !important;
+    padding: 0 !important;
+    width: 460px !important;
+    column-count: unset !important;
   }
-  .nav-group-label {
+  .nav-col-group {
+    flex: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .nav-col-group:first-child {
+    border-right: 1px solid var(--border, #e5e7eb);
+  }
+  .nav-col-group > .nav-group-label {
+    display: block;
     font-size: 9px;
     font-weight: 800;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--text-muted, #6b7280);
-    padding: 8px 16px 4px;
-    display: block;
+    padding: 10px 16px 6px;
     border-bottom: 1px solid var(--border, #e5e7eb);
-    margin-bottom: 2px;
-    break-after: avoid;
     pointer-events: none;
   }
-  .nav-group-col2 { break-before: column; }
+  .nav-col-group > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .nav-col-group > ul > li > a {
+    display: block;
+    padding: 7px 16px;
+    font-size: 13.5px;
+    color: var(--text, #1a202c);
+    text-decoration: none;
+    transition: color 0.15s, background 0.15s;
+    white-space: nowrap;
+  }
+  .nav-col-group > ul > li > a:hover {
+    color: var(--primary, #0079ff);
+    background: rgba(0,121,255,0.06);
+  }
   @media (max-width: 900px) {
-    .nav-dropdown-2col { column-count: 1; width: auto; }
+    ul.nav-dropdown-2col { flex-direction: column !important; width: auto !important; }
+    .nav-col-group:first-child { border-right: none; border-bottom: 1px solid var(--border, #e5e7eb); }
   }
-  /* ── Homepage: ensure white header over dark hero ── */
-  .page-home .site-header {
+
+  /* ── Homepage: force white header (override page-home transparent styles) ── */
+  .page-home .site-header { top: 0 !important; }
+  .page-home .header-inner {
     background: #fff !important;
-    box-shadow: 0 1px 8px rgba(0,0,0,0.08) !important;
+    border-radius: 0 !important;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.09) !important;
   }
+  .page-home .site-header.scrolled { top: 0 !important; }
+  .page-home .site-header.scrolled .header-inner {
+    background: #fff !important;
+    border-radius: 0 !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.13) !important;
+  }
+
   /* ── Footer quote: center only on mobile ── */
   .footer-tagline-item { text-align: left; }
   @media (max-width: 768px) {
@@ -128,46 +168,62 @@ function nav_cls($prefix) {
         <li class="nav-item has-dropdown<?= nav_active('/orthodontics') ? ' nav-item-active' : '' ?>">
           <a href="/orthodontics/" class="nav-link">Orthodontics <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
           <ul class="nav-dropdown nav-dropdown-wide nav-dropdown-2col">
-            <li class="nav-group-label">Braces</li>
-            <li><a href="/orthodontics/treatments/braces/">Braces</a></li>
-            <li><a href="/orthodontics/treatments/metal-braces/">Metal Braces</a></li>
-            <li><a href="/orthodontics/treatments/ceramic-braces/">Ceramic Braces</a></li>
-            <li><a href="/orthodontics/treatments/lingual-braces/">Lingual Braces</a></li>
-            <li><a href="/orthodontics/treatments/self-ligating-braces/">Self-Ligating Braces</a></li>
-            <li><a href="#" class="nav-missing">Braces for Kids</a></li>
-            <li><a href="#" class="nav-missing">Braces for Teens</a></li>
-            <li><a href="#" class="nav-missing">Braces for Adults</a></li>
-            <li class="nav-group-label nav-group-col2">Aligners &amp; More</li>
-            <li><a href="/orthodontics/treatments/invisalign/">Invisalign&reg;</a></li>
-            <li><a href="/orthodontics/treatments/aligners/invisalign-adults/">Invisalign for Adults</a></li>
-            <li><a href="/orthodontics/treatments/aligners/invisalign-teens/">Invisalign for Teens</a></li>
-            <li><a href="/orthodontics/treatments/clear-aligners/">Clear Aligners</a></li>
-            <li><a href="#" class="nav-missing">Retainers</a></li>
-            <li><a href="/orthodontics/treatments/palate-expanders/">Palate Expanders</a></li>
-            <li><a href="/orthodontics/treatments/accelerated-orthodontics/">Accelerated Orthodontics</a></li>
+            <li class="nav-col-group">
+              <span class="nav-group-label">Braces</span>
+              <ul>
+                <li><a href="/orthodontics/treatments/braces/">Braces</a></li>
+                <li><a href="/orthodontics/treatments/metal-braces/">Metal Braces</a></li>
+                <li><a href="/orthodontics/treatments/ceramic-braces/">Ceramic Braces</a></li>
+                <li><a href="/orthodontics/treatments/lingual-braces/">Lingual Braces</a></li>
+                <li><a href="/orthodontics/treatments/self-ligating-braces/">Self-Ligating Braces</a></li>
+                <li><a href="#" class="nav-missing">Braces for Kids</a></li>
+                <li><a href="#" class="nav-missing">Braces for Teens</a></li>
+                <li><a href="#" class="nav-missing">Braces for Adults</a></li>
+              </ul>
+            </li>
+            <li class="nav-col-group">
+              <span class="nav-group-label">Aligners &amp; More</span>
+              <ul>
+                <li><a href="/orthodontics/treatments/invisalign/">Invisalign&reg;</a></li>
+                <li><a href="/orthodontics/treatments/aligners/invisalign-adults/">Invisalign for Adults</a></li>
+                <li><a href="/orthodontics/treatments/aligners/invisalign-teens/">Invisalign for Teens</a></li>
+                <li><a href="/orthodontics/treatments/clear-aligners/">Clear Aligners</a></li>
+                <li><a href="#" class="nav-missing">Retainers</a></li>
+                <li><a href="/orthodontics/treatments/palate-expanders/">Palate Expanders</a></li>
+                <li><a href="/orthodontics/treatments/accelerated-orthodontics/">Accelerated Orthodontics</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
 
         <li class="nav-item has-dropdown<?= nav_active('/dental-implants') ? ' nav-item-active' : '' ?>">
           <a href="/dental-implants/" class="nav-link">Dental Implants <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
           <ul class="nav-dropdown nav-dropdown-wide nav-dropdown-2col">
-            <li class="nav-group-label">Implant Types</li>
-            <li><a href="/dental-implants/services/all-on-4/">All-on-4</a></li>
-            <li><a href="/dental-implants/services/all-on-6/">All-on-6</a></li>
-            <li><a href="/dental-implants/all-on-x/">All-on-X</a></li>
-            <li><a href="/dental-implants/services/single-tooth/">Single Tooth</a></li>
-            <li><a href="/dental-implants/services/full-mouth-dental-implants/">Full Mouth</a></li>
-            <li><a href="/dental-implants/services/zirconia/">Zirconia Implants</a></li>
-            <li><a href="/dental-implants/services/same-day/">Same Day Implants</a></li>
-            <li><a href="/dental-implants/services/implant-supported-dentures/">Implant-Supported Dentures</a></li>
-            <li class="nav-group-label nav-group-col2">Procedures &amp; More</li>
-            <li><a href="/dental-implants/services/snap-in-dentures/">Snap-In Dentures</a></li>
-            <li><a href="/dental-implants/services/bone-grafting/">Bone Grafting</a></li>
-            <li><a href="/dental-implants/services/sinus-lift/">Sinus Lift</a></li>
-            <li><a href="/dental-implants/conditions/failing-implants/">Failing Implants</a></li>
-            <li><a href="/dental-implants/services/maintenance/">Implant Maintenance</a></li>
-            <li><a href="/dental-implants/services/periodontics/lanap/">LANAP</a></li>
-            <li><a href="/dental-implants/financing/">Financing &amp; Insurance</a></li>
+            <li class="nav-col-group">
+              <span class="nav-group-label">Implant Types</span>
+              <ul>
+                <li><a href="/dental-implants/services/all-on-4/">All-on-4</a></li>
+                <li><a href="/dental-implants/services/all-on-6/">All-on-6</a></li>
+                <li><a href="/dental-implants/all-on-x/">All-on-X</a></li>
+                <li><a href="/dental-implants/services/single-tooth/">Single Tooth</a></li>
+                <li><a href="/dental-implants/services/full-mouth-dental-implants/">Full Mouth</a></li>
+                <li><a href="/dental-implants/services/zirconia/">Zirconia Implants</a></li>
+                <li><a href="/dental-implants/services/same-day/">Same Day Implants</a></li>
+                <li><a href="/dental-implants/services/implant-supported-dentures/">Implant-Supported Dentures</a></li>
+              </ul>
+            </li>
+            <li class="nav-col-group">
+              <span class="nav-group-label">Procedures &amp; More</span>
+              <ul>
+                <li><a href="/dental-implants/services/snap-in-dentures/">Snap-In Dentures</a></li>
+                <li><a href="/dental-implants/services/bone-grafting/">Bone Grafting</a></li>
+                <li><a href="/dental-implants/services/sinus-lift/">Sinus Lift</a></li>
+                <li><a href="/dental-implants/conditions/failing-implants/">Failing Implants</a></li>
+                <li><a href="/dental-implants/services/maintenance/">Implant Maintenance</a></li>
+                <li><a href="/dental-implants/services/periodontics/lanap/">LANAP</a></li>
+                <li><a href="/dental-implants/financing/">Financing &amp; Insurance</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
 
