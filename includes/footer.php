@@ -88,8 +88,8 @@
     <div class="footer-col">
       <h3 class="footer-heading">Company</h3>
       <ul class="footer-links">
-        <li><a href="/dental-implants/privacy-policy/">Privacy Policy</a></li>
-        <li><a href="/dental-implants/terms-of-service/">Terms of Service</a></li>
+        <li><a href="/privacy-policy/">Privacy Policy</a></li>
+        <li><a href="/terms-of-service/">Terms of Service</a></li>
       </ul>
     </div>
 
@@ -107,7 +107,7 @@
         <li>
           <a href="https://maps.google.com/?q=4250+Alafaya+Trail+%23180+Oviedo+FL+32765" target="_blank" rel="noopener">4250 Alafaya Trail #180<br>Oviedo, FL 32765</a>
         </li>
-        <li class="footer-social-row">
+        <li class="footer-social-row" style="margin-top:20px;padding-top:4px;">
           <a href="https://www.facebook.com/LachOrthodonticSpecialists" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
           <a href="https://www.instagram.com/lachortho/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
           <a href="https://www.linkedin.com/company/lach-orthodontic-specialists" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -116,7 +116,7 @@
           <a href="https://lachorthodontics.tumblr.com/" target="_blank" rel="noopener" aria-label="Tumblr"><i class="fa-brands fa-tumblr"></i></a>
           <a href="https://www.pinterest.com/lachorthodontic/" target="_blank" rel="noopener" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
         </li>
-        <li class="footer-tagline-item"><em>"We are like the cardiologists of the mouth."</em></li>
+        <li class="footer-tagline-item" style="margin-top:20px;font-size:15px;font-style:italic;color:rgba(255,255,255,0.6);line-height:1.5;">"We are like the cardiologists of the mouth."</li>
       </ul>
     </div>
 
@@ -126,15 +126,8 @@
     <div class="container footer-bottom-inner">
       <p>&copy; <?php echo date('Y'); ?> Sonrisa Dental Specialists. All rights reserved.</p>
       <ul class="footer-legal">
-        <?php
-          if (!empty($nav_type) && $nav_type === 'orthodontics') {
-            $legal_base = '/orthodontics';
-          } else {
-            $legal_base = '/dental-implants';
-          }
-        ?>
-        <li><a href="<?= $legal_base ?>/privacy-policy/">Privacy Policy</a></li>
-        <li><a href="<?= $legal_base ?>/terms-of-service/">Terms of Service</a></li>
+        <li><a href="/privacy-policy/">Privacy Policy</a></li>
+        <li><a href="/terms-of-service/">Terms of Service</a></li>
       </ul>
     </div>
   </div>

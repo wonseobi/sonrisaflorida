@@ -285,7 +285,8 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
   </div>
 </section>
 
-<!-- ── TRANSFORMATIONS ── -->
+<!-- ── TRANSFORMATIONS (hidden until content ready) ── -->
+<?php /*
 <section class="section transformations-section">
   <div class="container">
     <div class="transformations-header">
@@ -300,6 +301,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
     </div>
   </div>
 </section>
+*/ ?>
 
 <!-- ── REBUILD SECTION ── -->
 <section class="section rebuild-section">

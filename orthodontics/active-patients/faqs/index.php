@@ -58,7 +58,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
         </div>
         <div style="margin-bottom: 2.5rem;">
           <h3 style="color: var(--color-primary); margin-bottom: .75rem; font-size: 1.2rem;">How often do I need appointments?</h3>
-          <p>For braces patients, adjustment appointments are typically every 4–8 weeks. For Invisalign patients, in-person visits are usually every 6–12 weeks — with virtual check-ins between. Lachalign patients may have only a few in-person visits over the entire course of treatment. Your specific schedule will depend on your treatment type and how your case is progressing.</p>
+          <p>For braces patients, adjustment appointments are typically every 4–8 weeks. For Invisalign patients, in-person visits are usually every 6–12 weeks — with virtual check-ins between. SonrisaAlign patients may have only a few in-person visits over the entire course of treatment. Your specific schedule will depend on your treatment type and how your case is progressing.</p>
         </div>
         <div style="margin-bottom: 2.5rem;">
           <h3 style="color: var(--color-primary); margin-bottom: .75rem; font-size: 1.2rem;">Can I still play sports while in treatment?</h3>

@@ -1,174 +1,130 @@
 <?php
 $page_title       = 'Meet Our Team | Sonrisa Dental Specialists';
-$page_description = 'Get to know the dedicated team of dental specialists, hygienists, and patient coordinators at Sonrisa Dental Specialists committed to your smile.';
+$page_description = 'Meet the dedicated team at Sonrisa Dental Specialists — experienced clinical staff and patient coordinators committed to delivering exceptional orthodontic care in Lake Nona and Oviedo.';
 $page_class       = 'page-team';
 include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
 ?>
 
+<style>
+.team-prose-section { padding: 72px 0; }
+.team-prose-section + .team-prose-section { padding-top: 0; }
+.team-prose-inner { max-width: 820px; margin: 0 auto; }
+.team-prose-inner h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; color: var(--dark); margin-bottom: 1rem; }
+.team-prose-inner h2 span { color: var(--primary); }
+.team-prose-inner p { font-size: 1.05rem; line-height: 1.75; color: var(--text); margin-bottom: 1.1rem; }
+.team-prose-inner ul { margin: 1rem 0 1.25rem 1.25rem; }
+.team-prose-inner ul li { font-size: 1.05rem; line-height: 1.75; color: var(--text); margin-bottom: .4rem; list-style: disc; }
+.team-prose-divider { border: none; border-top: 1px solid var(--border-light, #e8ecf0); margin: 3rem 0; }
+
+.team-image-block { width: 100%; border-radius: 16px; overflow: hidden; margin: 2.5rem 0; box-shadow: 0 8px 32px rgba(0,0,0,.10); }
+.team-image-block img { width: 100%; display: block; }
+
+.team-split { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; margin: 2.5rem 0; }
+.team-split-img { border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,.10); }
+.team-split-img img { width: 100%; display: block; }
+.team-split-text h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); font-weight: 800; color: var(--dark); margin-bottom: .85rem; }
+.team-split-text h2 span { color: var(--primary); }
+.team-split-text p { font-size: 1.05rem; line-height: 1.75; color: var(--text); margin-bottom: 1rem; }
+.team-split-text ul { margin: .75rem 0 1rem 1.25rem; }
+.team-split-text ul li { font-size: 1.05rem; line-height: 1.75; color: var(--text); margin-bottom: .4rem; list-style: disc; }
+
+@media (max-width: 768px) {
+  .team-split { grid-template-columns: 1fr; gap: 32px; }
+  .team-split-img { order: -1; }
+  .team-prose-section { padding: 48px 0; }
+}
+</style>
+
 <!-- ── PAGE HERO ── -->
 <section class="hero hero-sm">
   <div class="hero-bg">
-    <img src="/assets/images/about_us01.jpg" alt="Sonrisa Dental Specialists reception and team" draggable="false">
+    <img src="/assets/images/about-hero.jpg" alt="Sonrisa Dental Specialists team" draggable="false">
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-inner">
     <div class="hero-content">
       <span class="hero-badge">Sonrisa Dental Specialists</span>
       <h1>
-        The People Behind<br>
-        <span class="hero-accent">Your Smile</span>
+        Meet the Team<br>
+        <span class="hero-accent">Behind Your Smile</span>
       </h1>
-      <p class="hero-sub">Behind every smile transformation is a team that genuinely cares. Get to know the dedicated specialists, hygienists, and coordinators who will be with you every step of your journey.</p>
-      <a href="/dental-implants/survey.php" class="btn btn-primary btn-lg">Book a Consultation</a>
+      <p class="hero-sub">From your very first visit to the completion of your treatment, our team is dedicated to making every step of your experience smooth, comfortable, and rewarding.</p>
+      <a href="/orthodontics/survey_orthodontics.php" class="btn btn-primary btn-lg">Book a Free Consultation</a>
     </div>
   </div>
 </section>
 
-<!-- ── LEAD DOCTORS ── -->
-<section class="section team-section">
+<!-- ── A TEAM COMMITTED ── -->
+<section class="team-prose-section section">
   <div class="container">
-
-    <div class="team-section-label">
-      <span class="section-label">Specialists</span>
-      <h2>Our <span class="text-primary">Doctors</span></h2>
+    <div class="team-prose-inner">
+      <span class="section-label">Our Team</span>
+      <h2>A Team Committed to <span>Exceptional Care</span></h2>
+      <p>At Sonrisa Dental Specialists, our team is the foundation of every great patient experience. Each member of our staff is selected not only for their clinical expertise, but also for their professionalism, attention to detail, and commitment to patient care.</p>
+      <p>From your first interaction to your final visit, our team works together to ensure every step of your experience is smooth, efficient, and comfortable.</p>
     </div>
 
-    <div class="team-doctors-grid">
+  </div>
+</section>
 
-      <div class="team-doctor-card">
-        <div class="team-doctor-photo team-photo-blue">
-          <span>DR</span>
-        </div>
-        <div class="team-doctor-body">
-          <h3>Doctor #1</h3>
-          <p class="team-title">Specialist Title</p>
-          <p class="team-bio">This is a placeholder bio for Doctor #1. Your doctor's full background, experience, certifications, and philosophy of care will be added here. This section highlights their expertise and dedication to delivering exceptional patient outcomes.</p>
-          <ul class="team-credentials">
-            <li><i class="fa-solid fa-graduation-cap"></i> University / Dental School</li>
-            <li><i class="fa-solid fa-certificate"></i> Board Certification</li>
-            <li><i class="fa-solid fa-star"></i> Years of Experience</li>
-          </ul>
-          <a href="/about/doctor/" class="implant-card-link">Full profile <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
+<!-- ── MORE THAN STRAIGHT TEETH ── -->
+<section class="section" style="padding:72px 0;">
+  <div class="container">
+    <div class="team-split">
+
+      <div class="team-split-text">
+        <span class="section-label">Comprehensive Care</span>
+        <h2>Focused on More Than <span>Just Straight Teeth</span></h2>
+        <p>Our team understands that a great smile is about more than alignment alone. We take a comprehensive approach that considers overall facial balance, symmetry, and aesthetics.</p>
+        <p>By working closely with our doctor, our team helps ensure that each treatment plan is tailored to enhance not only your smile, but your overall appearance and confidence.</p>
       </div>
 
-      <div class="team-doctor-card">
-        <div class="team-doctor-photo team-photo-purple">
-          <span>DR</span>
-        </div>
-        <div class="team-doctor-body">
-          <h3>Doctor #2</h3>
-          <p class="team-title">Specialist Title</p>
-          <p class="team-bio">This is a placeholder bio for Doctor #2. Your doctor's full background, experience, certifications, and philosophy of care will be added here. This section highlights their expertise and dedication to delivering exceptional patient outcomes.</p>
-          <ul class="team-credentials">
-            <li><i class="fa-solid fa-graduation-cap"></i> University / Dental School</li>
-            <li><i class="fa-solid fa-certificate"></i> Board Certification</li>
-            <li><i class="fa-solid fa-star"></i> Years of Experience</li>
-          </ul>
-          <a href="/about/doctor/" class="implant-card-link">Full profile <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
+      <div class="team-split-img">
+        <img src="/assets/images/meet-team-01.jpg" alt="Comprehensive orthodontic care at Sonrisa">
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- ── CLINICAL TEAM ── -->
-<section class="section team-section team-section-alt">
+<!-- ── EXPERIENCED ── -->
+<section class="section" style="background:var(--bg-light);padding:72px 0;">
   <div class="container">
-
-    <div class="team-section-label">
-      <span class="section-label">Clinical Staff</span>
-      <h2>Our Clinical <span class="text-primary">Team</span></h2>
-    </div>
-
-    <div class="team-grid">
-
-      <div class="team-card">
-        <div class="team-avatar team-avatar-green">1</div>
-        <h4>Team Member #1</h4>
-        <p class="team-title">Clinical Role</p>
-        <p>Placeholder description for Team Member #1. Their professional background, specialties, and contributions to the Sonrisa clinical team will be listed here.</p>
-      </div>
-
-      <div class="team-card">
-        <div class="team-avatar team-avatar-orange">2</div>
-        <h4>Team Member #2</h4>
-        <p class="team-title">Clinical Role</p>
-        <p>Placeholder description for Team Member #2. Their professional background, specialties, and contributions to the Sonrisa clinical team will be listed here.</p>
-      </div>
-
-      <div class="team-card">
-        <div class="team-avatar team-avatar-teal">3</div>
-        <h4>Team Member #3</h4>
-        <p class="team-title">Clinical Role</p>
-        <p>Placeholder description for Team Member #3. Their professional background, specialties, and contributions to the Sonrisa clinical team will be listed here.</p>
-      </div>
-
-      <div class="team-card">
-        <div class="team-avatar team-avatar-pink">4</div>
-        <h4>Team Member #4</h4>
-        <p class="team-title">Clinical Role</p>
-        <p>Placeholder description for Team Member #4. Their professional background, specialties, and contributions to the Sonrisa clinical team will be listed here.</p>
-      </div>
-
-      <div class="team-card">
-        <div class="team-avatar team-avatar-blue">5</div>
-        <h4>Team Member #5</h4>
-        <p class="team-title">Clinical Role</p>
-        <p>Placeholder description for Team Member #5. Their professional background, specialties, and contributions to the Sonrisa clinical team will be listed here.</p>
-      </div>
-
-      <div class="team-card">
-        <div class="team-avatar team-avatar-purple">6</div>
-        <h4>Team Member #6</h4>
-        <p class="team-title">Clinical Role</p>
-        <p>Placeholder description for Team Member #6. Their professional background, specialties, and contributions to the Sonrisa clinical team will be listed here.</p>
-      </div>
-
+    <div class="team-prose-inner">
+      <span class="section-label">Our Standards</span>
+      <h2>Experienced. Trained. <span>Dedicated.</span></h2>
+      <p>Our clinical and administrative staff are highly trained in modern orthodontic techniques and technologies. From assisting during procedures to coordinating scheduling and financial arrangements, every team member plays a key role in delivering high-quality care.</p>
+      <p>We are committed to:</p>
+      <ul>
+        <li>Maintaining the highest clinical standards</li>
+        <li>Staying current with advancements in orthodontics</li>
+        <li>Providing consistent, reliable support to every patient</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- ── FRONT DESK ── -->
-<section class="section team-section">
+<!-- ── WELCOMING ENVIRONMENT ── -->
+<section class="section" style="padding:72px 0;">
   <div class="container">
-
-    <div class="team-section-label">
-      <span class="section-label">Patient Experience</span>
-      <h2>Front Desk &amp; <span class="text-primary">Coordinators</span></h2>
+    <div class="team-prose-inner">
+      <span class="section-label">Our Environment</span>
+      <h2>A Welcoming Environment for <span>Every Patient</span></h2>
+      <p>We strive to create a professional yet friendly atmosphere where patients of all ages feel at ease. Whether it's your first consultation or a routine visit, our team is focused on making your experience as seamless and stress-free as possible.</p>
+      <p>Building long-term relationships with our patients and their families is an important part of what we do.</p>
     </div>
+  </div>
+</section>
 
-    <div class="team-grid team-grid-4">
-
-      <div class="team-card">
-        <div class="team-avatar team-avatar-orange">7</div>
-        <h4>Team Member #7</h4>
-        <p class="team-title">Coordinator Role</p>
-        <p>Placeholder description for Team Member #7. Their role in patient scheduling, coordination, and front-desk operations at Sonrisa will be described here.</p>
-      </div>
-
-      <div class="team-card">
-        <div class="team-avatar team-avatar-teal">8</div>
-        <h4>Team Member #8</h4>
-        <p class="team-title">Coordinator Role</p>
-        <p>Placeholder description for Team Member #8. Their role in patient scheduling, coordination, and front-desk operations at Sonrisa will be described here.</p>
-      </div>
-
-      <div class="team-card">
-        <div class="team-avatar team-avatar-green">9</div>
-        <h4>Team Member #9</h4>
-        <p class="team-title">Coordinator Role</p>
-        <p>Placeholder description for Team Member #9. Their role in patient scheduling, coordination, and front-desk operations at Sonrisa will be described here.</p>
-      </div>
-
-      <div class="team-card">
-        <div class="team-avatar team-avatar-pink">10</div>
-        <h4>Team Member #10</h4>
-        <p class="team-title">Coordinator Role</p>
-        <p>Placeholder description for Team Member #10. Their role in patient scheduling, coordination, and front-desk operations at Sonrisa will be described here.</p>
-      </div>
-
+<!-- ── MEET US CTA ── -->
+<section class="section page-cta-dark" style="background-image:url('/assets/images/cta.jpg');">
+  <div class="container">
+    <span class="section-label">We'd Love to Meet You</span>
+    <h2>Meet Our Team <span class="text-primary">In Person.</span></h2>
+    <p>The best way to experience the difference is to visit us. Schedule your <strong>free consultation</strong> at our Lake Nona or Oviedo location and meet the team dedicated to helping you achieve your best smile.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem;">
+      <a href="/lake-nona/" class="btn btn-white btn-lg">Lake Nona Office</a>
+      <a href="/oviedo/" class="btn btn-primary btn-lg">Oviedo Office</a>
     </div>
   </div>
 </section>

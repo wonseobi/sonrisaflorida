@@ -1,6 +1,6 @@
 <?php
 $page_title       = 'Meet the Doctor | Sonrisa Dental Specialists';
-$page_description = 'Learn about the lead specialist at Sonrisa Dental Specialists — their education, board certifications, and commitment to exceptional patient care in Miami, FL.';
+$page_description = 'Learn about the orthodontic specialist at Sonrisa Dental Specialists — 30+ years of experience, 20,000+ smiles transformed, and a deep commitment to exceptional patient care in Orlando, FL.';
 $page_class       = 'page-doctor';
 include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
 ?>
@@ -8,7 +8,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
 <!-- ── PAGE HERO ── -->
 <section class="hero hero-sm">
   <div class="hero-bg">
-    <img src="/assets/images/about_us01.jpg" alt="Sonrisa Dental Specialists office" draggable="false">
+    <img src="/assets/images/about-hero.jpg" alt="Sonrisa Dental Specialists office" draggable="false">
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-inner">
@@ -31,15 +31,17 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
 
       <!-- Left: photo + quick credentials -->
       <div class="doctor-profile-left">
-        <div class="doctor-profile-photo">DR</div>
+        <div class="doctor-profile-photo">
+          <img src="/assets/images/dr-lach-page.jpg" alt="Our Orthodontic Specialist" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
+        </div>
         <div class="doctor-name-badge">
-          <h2>Doctor #1</h2>
-          <p class="doctor-specialty">Lead Specialist</p>
+          <h2>Our Doctor</h2>
+          <p class="doctor-specialty">Orthodontic Specialist</p>
         </div>
         <div class="doctor-quick-creds">
           <div class="doctor-quick-cred">
             <i class="fa-solid fa-graduation-cap"></i>
-            University / Dental School
+            UNC Chapel Hill &amp; U of Louisville
           </div>
           <div class="doctor-quick-cred">
             <i class="fa-solid fa-certificate"></i>
@@ -47,11 +49,11 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
           </div>
           <div class="doctor-quick-cred">
             <i class="fa-solid fa-star"></i>
-            10+ Years of Experience
+            30+ Years of Experience
           </div>
           <div class="doctor-quick-cred">
             <i class="fa-solid fa-location-dot"></i>
-            Miami, Florida
+            Orlando, Florida
           </div>
           <div class="doctor-quick-cred">
             <i class="fa-solid fa-language"></i>
@@ -63,14 +65,14 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
       <!-- Right: bio -->
       <div class="doctor-profile-right">
         <span class="section-label">About the Doctor</span>
-        <h1>Doctor #1, DDS</h1>
-        <span class="doctor-role-label">Specialist Title &mdash; Sonrisa Dental Specialists</span>
+        <h1>Meet Our Doctor</h1>
+        <span class="doctor-role-label">Orthodontic Specialist &mdash; Sonrisa Dental Specialists</span>
 
-        <p>This is a placeholder biography for Doctor #1. When your doctor's information is ready, this section will highlight their background, professional journey, and the path that led them to founding or joining Sonrisa Dental Specialists. It will speak to their passion for transforming patient lives through expert dental care.</p>
+        <p>With over 30 years of orthodontic experience in the Orlando area, he has helped transform more than 20,000 smiles — bringing the same patient-first dedication to every case. A graduate at the top of his class from the University of North Carolina at Chapel Hill School of Dentistry, he also earned a Master's Degree in Oral Biology from the University of Louisville, where his original research explored how computers can simulate and predict changes following orthodontic treatment.</p>
 
-        <p>A graduate of [University / Dental School], Doctor #1 completed advanced specialty training at [Residency Program] and holds board certification in [Specialty]. With over [X] years of experience, they have treated thousands of patients and are recognized as one of the leading specialists in the Miami area.</p>
+        <p>He dedicates 50–100 hours annually to continuing education and has been at the forefront of orthodontic innovation. He was one of the first specialists in Central Florida to introduce 3D scanning, printing, and robotics to his practice, and is one of the area's only Elite Preferred Invisalign® Providers — placing him in the top 1% of providers worldwide. He has also served as an assistant professor of orthodontics at the University of Florida College of Dentistry, sharing his expertise with the next generation of dental professionals.</p>
 
-        <p>Outside of the practice, Doctor #1 is committed to continuing education — regularly attending national conferences and contributing to the advancement of modern dental techniques. Their goal is always the same: to give each patient a result that is both functionally sound and life-changing.</p>
+        <p>Beyond the practice, he is deeply committed to giving back. He founded the Smiles for Hope Foundation, a charity that provides life-changing orthodontic care to families who would otherwise go without. He has also sponsored hundreds of community events for local schools, athletic teams, and charitable organizations throughout Central Florida.</p>
 
         <div class="doctor-philosophy-quote">
           <p>"Every patient who walks through our doors deserves a personalized plan, honest guidance, and results they are proud to show off. That is the standard we hold ourselves to every single day."</p>
@@ -81,34 +83,15 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
 
     </div>
 
-    <!-- Stats bar -->
-    <div class="doctor-stats-bar">
-      <div class="doctor-stat-item">
-        <strong>5,000+</strong>
-        <span>Patients Treated</span>
-      </div>
-      <div class="doctor-stat-item">
-        <strong>10+</strong>
-        <span>Years of Experience</span>
-      </div>
-      <div class="doctor-stat-item">
-        <strong>Board</strong>
-        <span>Certified Specialist</span>
-      </div>
-      <div class="doctor-stat-item">
-        <strong>4.9★</strong>
-        <span>Average Patient Rating</span>
-      </div>
-    </div>
   </div>
 </section>
 
 <!-- ── CTA ── -->
-<section class="section doctor-cta-dark">
+<section class="section doctor-cta-dark" style="background-image:url('/assets/images/about-hero.jpg');background-size:cover;background-position:center;">
   <div class="container">
     <span class="section-label doctor-cta-label">Ready to Get Started?</span>
     <h2 class="doctor-cta-heading">Meet the Doctor <span class="text-primary">In Person.</span></h2>
-    <p class="doctor-cta-sub">The best way to experience Doctor #1's approach is to come in for a consultation. You will receive a full evaluation, an honest assessment of your options, and a personalized treatment plan — at no pressure, ever. Same-day appointments available.</p>
+    <p class="doctor-cta-sub">The best way to experience his approach is to come in for a consultation. You will receive a full evaluation, an honest assessment of your options, and a personalized treatment plan — at no pressure, ever. Same-day appointments available.</p>
     <a href="/dental-implants/survey.php" class="btn btn-primary btn-lg">Book Your Free Consultation</a>
   </div>
 </section>

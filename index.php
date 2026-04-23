@@ -3,7 +3,6 @@ $page_title       = 'Dentist in Orlando, FL | Sonrisa Dental Specialists';
 $page_description = 'Sonrisa Dental Specialists — comprehensive dental care in Orlando, FL. Serving Lake Nona and Oviedo with general dentistry, dental implants, and orthodontics. Call (407) 359-1960.';
 $page_class       = 'page-home';
 $hide_top_bar     = true;
-$hide_header      = true;
 include __DIR__ . '/includes/header.php';
 ?>
 
@@ -16,41 +15,6 @@ body.page-home {
 .page-home .site-footer {
   display: block !important;
   height: auto !important;
-}
-
-/* ── Minimal sticky top nav ── */
-.hp-topnav {
-  position: sticky;
-  top: 0;
-  z-index: 200;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 40px;
-  height: 68px;
-  background: var(--white);
-  border-bottom: 1px solid var(--border);
-  box-shadow: 0 1px 8px rgba(0,0,0,0.07);
-}
-.hp-topnav-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-}
-.hp-topnav-logo .site-logo-circles {
-  height: 28px;
-}
-.hp-topnav-logo .site-logo-circles img {
-  height: 46px;
-  width: auto;
-}
-.hp-topnav-logo .site-logo-sub {
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-muted);
 }
 
 /* ── HERO ── */
@@ -186,6 +150,16 @@ body.page-home {
 }
 @media (max-width: 900px) {
   .hp-eeat-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .hp-loc-split .hp-loc-map { order: 2; }
+  .hp-loc-split .hp-loc-content { order: 1; }
+}
+/* Let style.css handle gateway stacking at 768px — only reset the height override */
+@media (max-width: 768px) {
+  .gateway-split {
+    height: auto !important;
+    max-height: none !important;
+    min-height: 0 !important;
+  }
 }
 @media (max-width: 600px) {
   .hp-eeat-grid { grid-template-columns: 1fr !important; }
@@ -214,24 +188,12 @@ body.page-home {
   line-height: 1.6;
 }
 .hp-eeat-cta {
-  text-align: center;
-}
-
-/* ── Nav links ── */
-.hp-topnav-links {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 28px;
+  gap: 12px;
+  flex-wrap: wrap;
 }
-.hp-topnav-links a {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text-muted);
-  text-decoration: none;
-  transition: color 0.2s;
-  white-space: nowrap;
-}
-.hp-topnav-links a:hover { color: var(--primary); }
 
 /* ── Locations split layout ── */
 .hp-locations { background: var(--bg-light); }
@@ -323,43 +285,20 @@ body.page-home {
 }
 
 /* ── Responsive ── */
-@media (max-width: 1024px) {
-  .hp-topnav-links { gap: 18px; }
-}
 @media (max-width: 900px) {
   .hp-eeat-grid { grid-template-columns: repeat(2, 1fr); }
-  .hp-topnav { padding: 0 20px; }
-  .hp-topnav-links { display: none; }
   .hp-loc-split { grid-template-columns: 1fr; gap: 36px; padding: 56px 20px; }
 }
 @media (max-width: 600px) {
   .hp-eeat-grid { grid-template-columns: 1fr; }
-  .hp-hero-inner { flex-direction: column; align-items: flex-start; padding: 60px 20px 52px; gap: 24px; }
+  .hp-hero-inner { flex-direction: column; align-items: flex-start; padding: 96px 20px 52px; gap: 24px; }
   .hp-hero-inner .hero-stats { margin-left: 0; }
   .hp-specialties-intro { padding: 52px 20px 24px; }
-  .hp-topnav-logo .site-logo-sub { display: none; }
   .hp-loc-map { aspect-ratio: 16 / 9; }
 }
 
 body > div.asw-container > div > a { margin-bottom: 30px; }
 </style>
-
-<!-- ── MINIMAL STICKY TOP NAV ── -->
-<header class="hp-topnav" role="banner">
-  <a href="/" class="hp-topnav-logo" aria-label="Sonrisa Dental Specialists — Home">
-    <div class="site-logo-circles">
-      <img src="/assets/images/logo.svg" alt="Sonrisa Dental Specialists logo">
-    </div>
-    <span class="site-logo-sub">dental specialists</span>
-  </a>
-  <nav class="hp-topnav-links" aria-label="Main navigation">
-    <a href="/dental-implants/">Dental Implants</a>
-    <a href="/orthodontics/">Orthodontics</a>
-    <a href="/dental-implants/privacy-policy/">Privacy Policy</a>
-    <a href="/dental-implants/terms-of-service/">Terms of Service</a>
-  </nav>
-  <a href="/dental-implants/survey.php" class="btn btn-primary">Book Appointment</a>
-</header>
 
 <!-- ── HERO ── -->
 <section class="hp-hero">
@@ -479,7 +418,56 @@ body > div.asw-container > div > a { margin-bottom: 30px; }
     </div>
     <div class="hp-eeat-cta">
       <a href="/dental-implants/survey.php" class="btn btn-primary btn-lg">Book Appointment</a>
-      <a href="tel:+14073591960" class="btn btn-outline btn-lg" style="margin-left:12px;"><i class="fa-solid fa-phone" aria-hidden="true"></i>&nbsp;(407) 359-1960</a>
+      <a href="tel:+14073591960" class="btn btn-outline btn-lg"><i class="fa-solid fa-phone" aria-hidden="true"></i>&nbsp;(407) 359-1960</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── MEET THE DOCTOR ── -->
+<section class="section experts-section">
+  <div class="container">
+    <div class="two-col">
+
+      <div class="two-col-img">
+        <img src="/assets/images/meet-team-02.jpg" alt="Our Orthodontic Specialist" draggable="false">
+      </div>
+
+      <div class="two-col-text">
+        <span class="section-label">Meet the Doctor</span>
+        <h2>Meet the Doctor<br><span class="text-primary">Orthodontic Specialist</span></h2>
+        <p>He is a highly experienced orthodontic specialist with over 30 years of clinical expertise serving the Orlando community. Throughout his career, he has helped transform more than 20,000 smiles, combining advanced orthodontic techniques with a patient-first approach.</p>
+        <p>He earned his dental degree from the University of North Carolina at Chapel Hill, graduating at the top of his class, and went on to complete a Master's Degree in Oral Biology from the University of Louisville. In addition to leading his practice, he contributes to the field as an Assistant Professor at the University of Florida College of Dentistry.</p>
+        <ul class="experts-checklist">
+          <li><i class="fa-solid fa-circle-check"></i> 30+ Years of Clinical Experience</li>
+          <li><i class="fa-solid fa-circle-check"></i> 20,000+ Smiles Transformed</li>
+          <li><i class="fa-solid fa-circle-check"></i> UNC Chapel Hill &amp; University of Louisville</li>
+          <li><i class="fa-solid fa-circle-check"></i> Assistant Professor, UF College of Dentistry</li>
+        </ul>
+        <a href="/about/doctor/" class="btn btn-primary">Learn More About Our Doctor</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── MEET THE TEAM ── -->
+<section class="section" style="background:var(--bg-light);">
+  <div class="container">
+    <div class="two-col">
+
+      <div class="two-col-text">
+        <span class="section-label">Meet the Team</span>
+        <h2>A Dedicated Team<br><span class="text-primary">Focused on Your Experience.</span></h2>
+        <p>At Sonrisa Dental Specialists, our team plays a vital role in delivering a seamless and positive patient experience. From your first interaction to the completion of your treatment, every team member is committed to providing attentive, professional, and personalized care.</p>
+        <p>Our clinical and administrative staff are highly trained in orthodontic procedures, patient coordination, and modern treatment technologies. They work closely with our doctor to ensure each patient receives clear communication, efficient visits, and consistent support throughout their smile journey.</p>
+        <p>Together, we are dedicated to delivering high-quality orthodontic care while building lasting relationships with the patients and families we serve.</p>
+        <a href="/about/team/" class="btn btn-primary">Meet the Team</a>
+      </div>
+
+      <div class="two-col-img">
+        <img src="/assets/images/team_section.jpg" alt="Sonrisa Dental Specialists team" draggable="false">
+      </div>
+
     </div>
   </div>
 </section>

@@ -96,10 +96,10 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
 
         <div class="implant-card">
           <div class="implant-card-img">
-            <img src="/assets/images/Dental%20Technology03.jpg" alt="Lachalign at-home aligners" draggable="false">
+            <img src="/assets/images/Dental%20Technology03.jpg" alt="SonrisaAlign at-home aligners" draggable="false">
           </div>
           <div class="implant-card-body">
-            <h3>Lachalign At Home</h3>
+            <h3>SonrisaAlign At Home</h3>
             <p>Our exclusive doctor-directed at-home aligner program. Straighten your smile with orthodontist-supervised treatment delivered to your door — with fewer office visits.</p>
             <a href="/orthodontics/treatments/aligners/lachalign/" class="implant-card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
           </div>
@@ -405,7 +405,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
 
       <div class="review-card">
         <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-        <p class="review-text">"Dr. Lach has been an absolute lifesaver! He and his team are very friendly and approachable. They're great at communicating and always responsive, which makes scheduling appointments a breeze."</p>
+        <p class="review-text">"Our doctor has been an absolute lifesaver! He and his team are very friendly and approachable. They're great at communicating and always responsive, which makes scheduling appointments a breeze."</p>
         <div class="review-author">
           <div class="review-avatar">J</div>
           <div>

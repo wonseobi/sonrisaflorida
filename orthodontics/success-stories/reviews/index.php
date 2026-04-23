@@ -45,7 +45,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
         <div class="review-stars">
           <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
         </div>
-        <p class="review-text">"Brad's my favorite! Thank you Dr. Lach for making me confident in my smile :)"</p>
+        <p class="review-text">"Brad's my favorite! Thank you for making me confident in my smile :)"</p>
         <div class="review-author">
           <div class="review-avatar">N</div>
           <div><strong>Naadya Martinez</strong><span>Verified Patient</span></div>
@@ -67,7 +67,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
         <div class="review-stars">
           <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
         </div>
-        <p class="review-text">"Lach ortho staff is amazing my tech Brad is has an amazing soul. Looking for orthodontic professional look no further! You won't be disappointed"</p>
+        <p class="review-text">"The staff here is amazing, my tech Brad has an amazing soul. Looking for an orthodontic professional look no further! You won't be disappointed"</p>
         <div class="review-author">
           <div class="review-avatar">B</div>
           <div><strong>Belle Eskoe</strong><span>Verified Patient</span></div>
@@ -78,7 +78,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
         <div class="review-stars">
           <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
         </div>
-        <p class="review-text">"Lach Orthodontist is great. The staff specifically Brad is great. Would recommend coming here. Scheduling appointments is easy and intentional."</p>
+        <p class="review-text">"Sonrisa Orthodontics is great. The staff specifically Brad is great. Would recommend coming here. Scheduling appointments is easy and intentional."</p>
         <div class="review-author">
           <div class="review-avatar">G</div>
           <div><strong>Giselly R.</strong><span>Verified Patient</span></div>
@@ -89,7 +89,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
         <div class="review-stars">
           <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
         </div>
-        <p class="review-text">"Dr. Lach has been an absolute lifesaver! He and his team are very friendly and approachable. They're great at communicating and always responsive, which makes scheduling appointments a breeze."</p>
+        <p class="review-text">"Our doctor has been an absolute lifesaver! He and his team are very friendly and approachable. They're great at communicating and always responsive, which makes scheduling appointments a breeze."</p>
         <div class="review-author">
           <div class="review-avatar">J</div>
           <div><strong>JRE</strong><span>Verified Patient</span></div>
@@ -100,7 +100,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
         <div class="review-stars">
           <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
         </div>
-        <p class="review-text">"Paid 90$ last week for my bottom permanent retainer to be fixed. It wasn't fixed appropriately, and one of my teeth bottom teeth shifted. Spoke with Edna the office manager who urged me to make an appointment with the doctor. I was received by Brad and Dr Lach, who promptly came up with a plan to fix my teeth and at no cost to me. Customer service doesn't get better as far as I'm Concerned and I'm super grateful!"</p>
+        <p class="review-text">"Paid 90$ last week for my bottom permanent retainer to be fixed. It wasn't fixed appropriately, and one of my teeth bottom teeth shifted. Spoke with Edna the office manager who urged me to make an appointment with the doctor. I was received by Brad and our doctor, who promptly came up with a plan to fix my teeth and at no cost to me. Customer service doesn't get better as far as I'm Concerned and I'm super grateful!"</p>
         <div class="review-author">
           <div class="review-avatar">P</div>
           <div><strong>Patti Hoger</strong><span>Verified Patient</span></div>
@@ -111,7 +111,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
         <div class="review-stars">
           <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
         </div>
-        <p class="review-text">"My experience with Inbrace at Lach was exceptional from start to finish. Carolina ensured the process was seamless, providing exceptional care and attention to detail. The entire journey was smooth, and the outcome was perfect. I couldn't have asked for a better experience."</p>
+        <p class="review-text">"My experience with Inbrace at Sonrisa was exceptional from start to finish. Carolina ensured the process was seamless, providing exceptional care and attention to detail. The entire journey was smooth, and the outcome was perfect. I couldn't have asked for a better experience."</p>
         <div class="review-author">
           <div class="review-avatar">M</div>
           <div><strong>Mohammed Alansari</strong><span>Verified Patient</span></div>
@@ -122,7 +122,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
         <div class="review-stars">
           <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
         </div>
-        <p class="review-text">"Lach orthodontic is very great. they really good at there job and they will take care of you really good and they never fail to make you feel safe and happy with there work they serve there clients 😊. i really recommend …"</p>
+        <p class="review-text">"Sonrisa Orthodontics is very great. they really good at there job and they will take care of you really good and they never fail to make you feel safe and happy with there work they serve there clients 😊. i really recommend …"</p>
         <div class="review-author">
           <div class="review-avatar">V</div>
           <div><strong>Valentina Ruiz</strong><span>Verified Patient</span></div>
@@ -140,7 +140,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
       <div class="two-col-text">
         <span class="section-label">Google Reviews</span>
         <h2>Hundreds of Five-Star Reviews<br><span class="text-primary">on Google.</span></h2>
-        <p>Our patients don't just leave happy — they take the time to share their experience. Lach Orthodontic Specialists has accumulated hundreds of five-star reviews on Google from patients across Oviedo, Winter Park, East Orlando, and surrounding Central Florida communities. We're proud of every single one.</p>
+        <p>Our patients don't just leave happy — they take the time to share their experience. Sonrisa Dental Specialists has accumulated hundreds of five-star reviews on Google from patients across Oviedo, Winter Park, East Orlando, and surrounding Central Florida communities. We're proud of every single one.</p>
         <p>Reviews cover everything from first impressions during the consultation, to how we handle unexpected concerns mid-treatment, to the experience of debonding day. Read them in full on our Google Business listing and see what patients consistently say about our team, our technology, and our results.</p>
         <ul class="experts-checklist">
           <li><i class="fa-solid fa-circle-check"></i> Hundreds of five-star reviews on Google</li>

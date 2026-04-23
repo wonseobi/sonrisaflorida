@@ -21,13 +21,14 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
       <ul>
         <li><a href="#information-we-collect">1. Information We Collect</a></li>
         <li><a href="#how-we-use">2. How We Use Your Information</a></li>
-        <li><a href="#sharing">3. Sharing of Information</a></li>
-        <li><a href="#cookies">4. Cookies &amp; Tracking</a></li>
-        <li><a href="#data-security">5. Data Security</a></li>
-        <li><a href="#your-rights">6. Your Rights</a></li>
-        <li><a href="#children">7. Children&rsquo;s Privacy</a></li>
-        <li><a href="#changes">8. Changes to This Policy</a></li>
-        <li><a href="#contact">9. Contact Us</a></li>
+        <li><a href="#sms-messaging">3. SMS/Text Messaging Communication</a></li>
+        <li><a href="#sharing">4. Sharing of Information</a></li>
+        <li><a href="#cookies">5. Cookies &amp; Tracking</a></li>
+        <li><a href="#data-security">6. Data Security</a></li>
+        <li><a href="#your-rights">7. Your Rights</a></li>
+        <li><a href="#children">8. Children&rsquo;s Privacy</a></li>
+        <li><a href="#changes">9. Changes to This Policy</a></li>
+        <li><a href="#contact">10. Contact Us</a></li>
       </ul>
     </div>
 
@@ -63,7 +64,17 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
       </ul>
       <p>We will never sell your personal information to third parties or use it for purposes unrelated to providing dental care and related services.</p>
 
-      <h2 id="sharing">3. Sharing of Information</h2>
+      <h2 id="sms-messaging">3. SMS/Text Messaging Communication</h2>
+      <p>By providing your mobile number and opting in, you consent to receive text messages from Sonrisa Dental Specialists. These messages may include appointment reminders, follow-up care instructions, office updates, or marketing communications.</p>
+      <ul>
+        <li><strong>Opt-In:</strong> You may opt-in via our website forms or by texting START to <a href="tel:+14073591960">(407) 359-1960</a>.</li>
+        <li><strong>Opt-Out:</strong> You can cancel the SMS service at any time. Just text STOP to <a href="tel:+14073591960">(407) 359-1960</a>. After you send STOP, we will send a confirmation message and you will no longer receive SMS messages from us.</li>
+        <li><strong>Help:</strong> If you are experiencing issues with the messaging program, reply with the keyword HELP for more assistance, or contact us directly at <a href="mailto:info@sonrisadental.com">info@sonrisadental.com</a> or <a href="tel:+14073591960">(407) 359-1960</a>.</li>
+        <li><strong>Frequency:</strong> Message frequency varies based on your appointment schedule and needs.</li>
+        <li><strong>Rates:</strong> Carriers are not liable for delayed or undelivered messages. Message and data rates may apply for any messages sent to you from us and to us from you.</li>
+      </ul>
+
+      <h2 id="sharing">4. Sharing of Information</h2>
       <p>We do not sell, trade, or rent your personal information. We may share your information only in the following limited circumstances:</p>
       <ul>
         <li><strong>Service Providers:</strong> Trusted vendors who help us operate our website and business (e.g., appointment scheduling software, CRM platforms), subject to confidentiality obligations.</li>
@@ -71,7 +82,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
         <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of practice assets, your information may be transferred as part of that transaction.</li>
       </ul>
 
-      <h2 id="cookies">4. Cookies &amp; Tracking</h2>
+      <p><strong>Text messaging originator opt-in data and consent will not be shared with any third parties.</strong></p>
+
+      <h2 id="cookies">5. Cookies &amp; Tracking</h2>
       <p>Our website uses cookies and similar technologies to enhance your experience and gather analytics data. These include:</p>
       <ul>
         <li><strong>Essential Cookies:</strong> Required for basic website functionality.</li>
@@ -80,10 +93,10 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
       </ul>
       <p>You may disable cookies through your browser settings. Note that doing so may affect some website functionality.</p>
 
-      <h2 id="data-security">5. Data Security</h2>
+      <h2 id="data-security">6. Data Security</h2>
       <p>We implement industry-standard technical and organizational measures to protect your personal information from unauthorized access, disclosure, alteration, or destruction. However, no method of transmission over the Internet is 100% secure, and we cannot guarantee absolute security.</p>
 
-      <h2 id="your-rights">6. Your Rights</h2>
+      <h2 id="your-rights">7. Your Rights</h2>
       <p>Depending on your location, you may have certain rights regarding your personal information, including the right to:</p>
       <ul>
         <li>Access the personal information we hold about you</li>
@@ -93,13 +106,13 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
       </ul>
       <p>To exercise any of these rights, please contact us using the information below.</p>
 
-      <h2 id="children">7. Children&rsquo;s Privacy</h2>
+      <h2 id="children">8. Children&rsquo;s Privacy</h2>
       <p>Our website is not directed to children under the age of 13. We do not knowingly collect personal information from children. If you believe we have inadvertently collected such information, please contact us and we will promptly delete it.</p>
 
-      <h2 id="changes">8. Changes to This Policy</h2>
+      <h2 id="changes">9. Changes to This Policy</h2>
       <p>We may update this Privacy Policy from time to time to reflect changes in our practices or applicable law. We will post the updated policy on this page with a revised &ldquo;Last updated&rdquo; date. We encourage you to review this page periodically.</p>
 
-      <h2 id="contact">9. Contact Us</h2>
+      <h2 id="contact">10. Contact Us</h2>
       <p>If you have any questions about this Privacy Policy or how we handle your personal information, please contact us:</p>
       <div class="legal-contact-box">
         <strong>Sonrisa Dental Specialists</strong>
