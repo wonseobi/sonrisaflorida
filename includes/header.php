@@ -33,10 +33,6 @@
   <script src="https://cdn.jsdelivr.net/npm/sienna-accessibility@latest/dist/sienna-accessibility.umd.js" defer></script>
 
   <style>
-  /* ── Universal nav — missing pages (red) ── */
-  a.nav-missing { color: #e53e3e !important; }
-  a.nav-missing:hover { color: #c53030 !important; }
-
   /* ── 2-column dropdown: flex approach for guaranteed top-to-bottom order ── */
   ul.nav-dropdown-2col {
     display: flex !important;
@@ -176,9 +172,6 @@ function nav_cls($prefix) {
                 <li><a href="/orthodontics/treatments/ceramic-braces/">Ceramic Braces</a></li>
                 <li><a href="/orthodontics/treatments/lingual-braces/">Lingual Braces</a></li>
                 <li><a href="/orthodontics/treatments/self-ligating-braces/">Self-Ligating Braces</a></li>
-                <li><a href="#" class="nav-missing">Braces for Kids</a></li>
-                <li><a href="#" class="nav-missing">Braces for Teens</a></li>
-                <li><a href="#" class="nav-missing">Braces for Adults</a></li>
               </ul>
             </li>
             <li class="nav-col-group">
@@ -188,7 +181,6 @@ function nav_cls($prefix) {
                 <li><a href="/orthodontics/treatments/aligners/invisalign-adults/">Invisalign for Adults</a></li>
                 <li><a href="/orthodontics/treatments/aligners/invisalign-teens/">Invisalign for Teens</a></li>
                 <li><a href="/orthodontics/treatments/clear-aligners/">Clear Aligners</a></li>
-                <li><a href="#" class="nav-missing">Retainers</a></li>
                 <li><a href="/orthodontics/treatments/palate-expanders/">Palate Expanders</a></li>
                 <li><a href="/orthodontics/treatments/accelerated-orthodontics/">Accelerated Orthodontics</a></li>
               </ul>
@@ -224,16 +216,6 @@ function nav_cls($prefix) {
                 <li><a href="/dental-implants/financing/">Financing &amp; Insurance</a></li>
               </ul>
             </li>
-          </ul>
-        </li>
-
-        <li class="nav-item has-dropdown">
-          <a href="javascript:void(0)" class="nav-link">Oral Surgery <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
-          <ul class="nav-dropdown">
-            <li><a href="#" class="nav-missing">Wisdom Teeth</a></li>
-            <li><a href="#" class="nav-missing">IV Sedation</a></li>
-            <li><a href="#" class="nav-missing">Tooth Extractions</a></li>
-            <li><a href="#" class="nav-missing">Surgical Extractions</a></li>
           </ul>
         </li>
 
