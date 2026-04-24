@@ -257,11 +257,13 @@ function nav_cls($prefix) {
           </ul>
         </li>
 
-        <li class="nav-item has-dropdown">
-          <a href="javascript:void(0)" class="nav-link">Contact <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+        <li class="nav-item has-dropdown<?= nav_active('/oral-surgery') ? ' nav-item-active' : '' ?>">
+          <a href="javascript:void(0)" class="nav-link">Oral Surgery <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
           <ul class="nav-dropdown">
-            <li><a href="/lake-nona/">Lake Nona Office</a></li>
-            <li><a href="/oviedo/">Oviedo Office</a></li>
+            <li><a href="/oral-surgery/wisdom-teeth/">Wisdom Teeth</a></li>
+            <li><a href="/oral-surgery/iv-sedation/">IV Sedation</a></li>
+            <li><a href="/oral-surgery/tooth-extraction/">Tooth Extraction</a></li>
+            <li><a href="/oral-surgery/surgical-extraction/">Surgical Extraction</a></li>
           </ul>
         </li>
 
