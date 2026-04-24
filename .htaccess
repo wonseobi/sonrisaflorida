@@ -1,7 +1,119 @@
 Options -Indexes
 RewriteEngine On
 
-# Remove trailing slashes (except root)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# 301 REDIRECTS — lach-ortho.com legacy URLs
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# ── About ──
+Redirect 301 /about-us /about/team/
+Redirect 301 /about-us/ /about/team/
+Redirect 301 /about-us/meet-dr-lach /about/doctor/
+Redirect 301 /about-us/meet-dr-lach/ /about/doctor/
+Redirect 301 /about-us/meet-the-team /about/team/
+Redirect 301 /about-us/meet-the-team/ /about/team/
+Redirect 301 /about-us/our-costs /orthodontics/about/our-costs/
+Redirect 301 /about-us/our-costs/ /orthodontics/about/our-costs/
+Redirect 301 /about-us/office-virtual-tours /about/team/
+Redirect 301 /about-us/office-virtual-tours/ /about/team/
+Redirect 301 /about-us/smiles-for-hope-foundation /about/team/
+Redirect 301 /about-us/smiles-for-hope-foundation/ /about/team/
+
+# ── Treatments → Orthodontics ──
+Redirect 301 /treatments /orthodontics/
+Redirect 301 /treatments/ /orthodontics/
+Redirect 301 /treatments/braces-services /orthodontics/treatments/braces/
+Redirect 301 /treatments/braces-services/ /orthodontics/treatments/braces/
+Redirect 301 /treatments/braces-services/types-of-braces /orthodontics/treatments/braces/
+Redirect 301 /treatments/braces-services/types-of-braces/ /orthodontics/treatments/braces/
+Redirect 301 /treatments/braces-services/3d-computer-designed-braces /orthodontics/treatments/braces/
+Redirect 301 /treatments/braces-services/3d-computer-designed-braces/ /orthodontics/treatments/braces/
+Redirect 301 /treatments/aligners /orthodontics/treatments/clear-aligners/
+Redirect 301 /treatments/aligners/ /orthodontics/treatments/clear-aligners/
+Redirect 301 /treatments/aligners/invisalign-for-adults /orthodontics/treatments/aligners/invisalign-adults/
+Redirect 301 /treatments/aligners/invisalign-for-adults/ /orthodontics/treatments/aligners/invisalign-adults/
+Redirect 301 /treatments/aligners/invisalign-for-teens /orthodontics/treatments/aligners/invisalign-teens/
+Redirect 301 /treatments/aligners/invisalign-for-teens/ /orthodontics/treatments/aligners/invisalign-teens/
+Redirect 301 /treatments/aligners/lachalign-at-home /orthodontics/treatments/aligners/lachalign/
+Redirect 301 /treatments/aligners/lachalign-at-home/ /orthodontics/treatments/aligners/lachalign/
+Redirect 301 /treatments/expanders /orthodontics/treatments/palate-expanders/
+Redirect 301 /treatments/expanders/ /orthodontics/treatments/palate-expanders/
+Redirect 301 /treatments/accelerated-treatment /orthodontics/treatments/accelerated-orthodontics/
+Redirect 301 /treatments/accelerated-treatment/ /orthodontics/treatments/accelerated-orthodontics/
+Redirect 301 /treatments/precision-3d-digital-scan /orthodontics/treatments/braces/
+Redirect 301 /treatments/precision-3d-digital-scan/ /orthodontics/treatments/braces/
+Redirect 301 /treatments/tmj-and-sleep-apnea /orthodontics/
+Redirect 301 /treatments/tmj-and-sleep-apnea/ /orthodontics/
+Redirect 301 /treatments/smile-makeover-dentist /orthodontics/
+Redirect 301 /treatments/smile-makeover-dentist/ /orthodontics/
+Redirect 301 /treatments/teeth-whitening /orthodontics/
+Redirect 301 /treatments/teeth-whitening/ /orthodontics/
+Redirect 301 /treatments/retainer-insurance /orthodontics/new-patients/verify-insurance/
+Redirect 301 /treatments/retainer-insurance/ /orthodontics/new-patients/verify-insurance/
+Redirect 301 /treatments/oral-surgery-sedation /oral-surgery/iv-sedation/
+Redirect 301 /treatments/oral-surgery-sedation/ /oral-surgery/iv-sedation/
+Redirect 301 /treatments/dental-implants /dental-implants/
+Redirect 301 /treatments/dental-implants/ /dental-implants/
+Redirect 301 /color-braces-for-teeth /orthodontics/treatments/braces/
+Redirect 301 /color-braces-for-teeth/ /orthodontics/treatments/braces/
+Redirect 301 /braces-vs-lingual-braces-cost /orthodontics/treatments/lingual-braces/
+Redirect 301 /braces-vs-lingual-braces-cost/ /orthodontics/treatments/lingual-braces/
+Redirect 301 /best-way-to-whiten-teeth /orthodontics/
+Redirect 301 /best-way-to-whiten-teeth/ /orthodontics/
+
+# ── New Patients ──
+Redirect 301 /new-patients /orthodontics/new-patients/free-consultation/
+Redirect 301 /new-patients/ /orthodontics/new-patients/free-consultation/
+Redirect 301 /new-patients/free-in-office-consultation /orthodontics/new-patients/free-consultation/
+Redirect 301 /new-patients/free-in-office-consultation/ /orthodontics/new-patients/free-consultation/
+Redirect 301 /new-patients/free-digital-consultation /orthodontics/new-patients/digital-consultation/
+Redirect 301 /new-patients/free-digital-consultation/ /orthodontics/new-patients/digital-consultation/
+Redirect 301 /new-patients/verify-my-insurance /orthodontics/new-patients/verify-insurance/
+Redirect 301 /new-patients/verify-my-insurance/ /orthodontics/new-patients/verify-insurance/
+Redirect 301 /new-patients/orthodontist-vs-dentist /orthodontics/new-patients/free-consultation/
+Redirect 301 /new-patients/orthodontist-vs-dentist/ /orthodontics/new-patients/free-consultation/
+
+# ── Active Patients ──
+Redirect 301 /active-patients /orthodontics/active-patients/virtual-appointments/
+Redirect 301 /active-patients/ /orthodontics/active-patients/virtual-appointments/
+Redirect 301 /active-patients/patient-forms /orthodontics/new-patients/patient-forms/
+Redirect 301 /active-patients/patient-forms/ /orthodontics/new-patients/patient-forms/
+Redirect 301 /active-patients/orthodontic-faqs /orthodontics/active-patients/faqs/
+Redirect 301 /active-patients/orthodontic-faqs/ /orthodontics/active-patients/faqs/
+Redirect 301 /active-patients/emergency-information /orthodontics/active-patients/emergency/
+Redirect 301 /active-patients/emergency-information/ /orthodontics/active-patients/emergency/
+
+# ── Success Stories ──
+Redirect 301 /success-stories /orthodontics/success-stories/smile-gallery/
+Redirect 301 /success-stories/ /orthodontics/success-stories/smile-gallery/
+Redirect 301 /success-stories/smile-gallery /orthodontics/success-stories/smile-gallery/
+Redirect 301 /success-stories/smile-gallery/ /orthodontics/success-stories/smile-gallery/
+Redirect 301 /success-stories/reviews /orthodontics/success-stories/reviews/
+Redirect 301 /success-stories/reviews/ /orthodontics/success-stories/reviews/
+
+# ── Contact / Locations ──
+Redirect 301 /contact-us /lake-nona/
+Redirect 301 /contact-us/ /lake-nona/
+Redirect 301 /contact-us/oviedo-office /oviedo/
+Redirect 301 /contact-us/oviedo-office/ /oviedo/
+Redirect 301 /contact-us/lake-nona-office /lake-nona/
+Redirect 301 /contact-us/lake-nona-office/ /lake-nona/
+
+# ── Blog ──
+Redirect 301 /blog /orthodontics/about/blog/
+Redirect 301 /blog/ /orthodontics/about/blog/
+RedirectMatch 301 ^/blog/(.*)$ /orthodontics/about/blog/
+
+# ── Legal ──
+Redirect 301 /terms-and-conditions /terms-of-service/
+Redirect 301 /terms-and-conditions/ /terms-of-service/
+Redirect 301 /cookies-policy /privacy-policy/
+Redirect 301 /cookies-policy/ /privacy-policy/
+
+# ── Survey ──
+Redirect 301 /survey.php /orthodontics/survey_orthodontics.php
+
+# ── Remove trailing slashes (except root) ──
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)/$ /$1 [R=301,L]
 
