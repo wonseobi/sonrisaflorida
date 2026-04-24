@@ -32,12 +32,15 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function(e) {
           if (isMobile()) {
             e.preventDefault()
-            var isOpen = item.classList.toggle('dropdown-open')
-            // Close siblings
+            e.stopPropagation()
+            var isCurrentlyOpen = item.classList.contains('dropdown-open')
+            // Close all dropdowns first
             for (var j = 0; j < dropdownItems.length; j++) {
-              if (dropdownItems[j] !== item) {
-                dropdownItems[j].classList.remove('dropdown-open')
-              }
+              dropdownItems[j].classList.remove('dropdown-open')
+            }
+            // If it wasn't open before, open it now
+            if (!isCurrentlyOpen) {
+              item.classList.add('dropdown-open')
             }
           }
         })

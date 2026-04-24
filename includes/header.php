@@ -35,7 +35,7 @@
   <style>
   /* ── 2-column dropdown: flex approach for guaranteed top-to-bottom order ── */
   ul.nav-dropdown-2col {
-    display: flex !important;
+    display: flex;
     flex-direction: row !important;
     padding: 0 !important;
     width: 460px !important;

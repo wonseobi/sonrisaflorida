@@ -1,6 +1,6 @@
 <?php
-$page_title       = 'All-on-X Dental Implants | Sonrisa Dental Specialists';
-$page_description = 'All-on-4 and All-on-6 dental implants at Sonrisa Dental Specialists. A complete set of fixed teeth in one procedure. Book a free consultation in Miami, FL.';
+$page_title       = 'All-on-X Dental Implants in Orlando, FL — Full Arch in One Day | Sonrisa Dental Specialists';
+$page_description = 'All-on-4 & All-on-6 full-arch implants in Lake Nona & Oviedo, FL. A complete fixed set of teeth supported by just 4–6 implants, often placed in a single visit. Free consultation.';
 $page_class       = 'page-all-on-x';
 include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
 ?>
@@ -15,8 +15,8 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
     <div class="hero-content">
       <span class="hero-badge">Dental Implants</span>
       <h1>
-        A Full Set of Teeth.<br>
-        <span class="hero-accent">Supported by Just 4 to 6 Implants.</span>
+        All-on-X Dental Implants in Orlando, FL<br>
+        <span class="hero-accent">Full Arch. One Day. Fixed Forever.</span>
       </h1>
       <p class="hero-sub">All-on-X is a revolutionary full-arch restoration technique that uses just four to six strategically angled implants to support an entire set of fixed teeth — often placed and loaded in a single visit.</p>
       <a href="/dental-implants/survey.php" class="btn btn-primary btn-lg">Book a Free Consultation</a>

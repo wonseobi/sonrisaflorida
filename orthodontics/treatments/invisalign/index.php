@@ -1,6 +1,6 @@
 <?php
-$page_title       = 'Invisalign® | Sonrisa Orthodontics — Certified Diamond Provider';
-$page_description = 'Sonrisa Orthodontics is a certified Invisalign® Diamond Provider in Oviedo, FL — top 1% of providers nationwide. Clear aligners, faster results, beautiful smiles.';
+$page_title       = 'Invisalign® in Orlando, FL — Diamond Certified Provider | Sonrisa Dental Specialists';
+$page_description = 'Certified Invisalign® Diamond Provider in Lake Nona & Oviedo, FL — top 1% of providers nationwide. Clear aligners for teens and adults. Faster results, virtually invisible. Free consultation.';
 $page_class       = 'page-service';
 $nav_type         = 'orthodontics';
 include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
@@ -14,7 +14,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
   <div class="hero-inner">
     <div class="hero-content">
       <span class="hero-badge">Diamond Provider</span>
-      <h1>Invisalign®<br><span class="hero-accent">Certified Diamond Provider.</span></h1>
+      <h1>Invisalign® in Orlando, FL<br><span class="hero-accent">Diamond Certified Provider.</span></h1>
       <p class="hero-sub">As a Diamond Provider, we're in the top 1% of Invisalign practices nationwide — meaning more experience, better outcomes, and faster treatment for you.</p>
       <a href="/orthodontics/survey_orthodontics.php" class="btn btn-primary btn-lg">Book a Free Consultation</a>
     </div>

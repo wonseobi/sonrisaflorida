@@ -1,6 +1,6 @@
 <?php
-$page_title       = 'Dentist in Orlando, FL | Sonrisa Dental Specialists';
-$page_description = 'Sonrisa Dental Specialists — comprehensive dental care in Orlando, FL. Serving Lake Nona and Oviedo with general dentistry, dental implants, and orthodontics. Call (407) 359-1960.';
+$page_title       = 'Dental Implants & Orthodontics in Orlando, FL | Sonrisa Dental Specialists';
+$page_description = 'Sonrisa Dental Specialists — implant-only specialists and board-certified orthodontists serving Lake Nona & Oviedo, FL. Same-day implants, Invisalign®, oral surgery & free consultations. Call (407) 359-1960.';
 $page_class       = 'page-home';
 $hide_top_bar     = true;
 include __DIR__ . '/includes/header.php';
@@ -44,8 +44,8 @@ body.page-home {
   flex-direction: row;
   align-items: flex-end;
   gap: 40px;
-  padding-top: 80px;
-  padding-bottom: 72px;
+  padding-top: calc(var(--header-height) + 100px);
+  padding-bottom: 100px;
   padding-left: var(--gutter);
   padding-right: var(--gutter);
   width: 100%;

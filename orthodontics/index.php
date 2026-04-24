@@ -1,6 +1,6 @@
 <?php
-$page_title       = 'Orthodontics | Sonrisa Dental Specialists';
-$page_description = 'Straighten your smile with expert orthodontic care at Sonrisa Dental Specialists. Traditional braces, clear aligners, ceramic braces, lingual braces, and teen orthodontics. Book a free consultation today.';
+$page_title       = 'Orthodontist in Orlando, FL — Braces & Invisalign® | Sonrisa Dental Specialists';
+$page_description = 'Board-certified orthodontist in Lake Nona & Oviedo, FL. Metal braces, ceramic braces, Invisalign®, lingual braces & clear aligners for teens and adults. Free consultation available.';
 $page_class       = 'page-orthodontics';
 $nav_type         = 'orthodontics';
 include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
@@ -16,8 +16,8 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
     <div class="hero-content">
       <span class="hero-badge">Sonrisa Dental Specialists</span>
       <h1>
-        The Smile You've Always<br>
-        <span class="hero-accent">Wanted Starts Here</span>
+        Orthodontist in Orlando, FL<br>
+        <span class="hero-accent">Braces & Invisalign® Specialists</span>
       </h1>
       <p class="hero-sub">From traditional braces to nearly invisible clear aligners — our board-certified orthodontists create personalized treatment plans that deliver beautiful, long-lasting results for patients of all ages.</p>
       <div class="hero-cta-group">

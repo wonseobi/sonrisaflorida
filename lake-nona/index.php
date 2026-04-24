@@ -1,6 +1,6 @@
 <?php
-$page_title       = 'Dentist in Lake Nona, FL | Sonrisa Dental Specialists';
-$page_description = 'Sonrisa Dental Specialists — your Lake Nona dental office. Orthodontics, IV sedation, wisdom teeth, and more. 10437 Moss Park Road Suite B, Orlando FL 32832. Call (407) 359-1960.';
+$page_title       = 'Dental Implants & Orthodontics in Lake Nona, FL | Sonrisa Dental Specialists';
+$page_description = 'Sonrisa Dental Specialists in Lake Nona, FL — implants, orthodontics & oral surgery near you. 10437 Moss Park Road Suite B, Orlando FL 32832. Call (407) 359-1960.';
 $page_class       = 'page-service';
 include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
 ?>
@@ -11,7 +11,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
   <div class="hero-inner">
     <div class="hero-content">
       <span class="hero-badge">Lake Nona, FL</span>
-      <h1>Dentist in Lake Nona, FL<br><span class="hero-accent">Sonrisa Dental Specialists</span></h1>
+      <h1>Dental Implants & Orthodontics<br><span class="hero-accent">in Lake Nona, FL</span></h1>
       <p class="hero-sub">Serving Lake Nona Medical City, Laureate Park, Tavistock, and surrounding communities. Orthodontics, IV sedation, wisdom teeth removal, and more — all under one roof.</p>
       <div class="hero-cta-group">
         <a href="/orthodontics/survey_orthodontics.php" class="btn btn-primary btn-lg">Book a Free Consultation</a>

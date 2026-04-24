@@ -1,6 +1,6 @@
 <?php
-$page_title       = 'Dentist in Oviedo, FL | Sonrisa Dental Specialists';
-$page_description = 'Sonrisa Dental Specialists — your Oviedo dental office. Dental implants, oral surgery, orthodontics, All-On-X, and more. 4250 Alafaya Trail Suite 180, Oviedo FL 32765. Call (407) 359-1960.';
+$page_title       = 'Dental Implants & Orthodontics in Oviedo, FL | Sonrisa Dental Specialists';
+$page_description = 'Sonrisa Dental Specialists in Oviedo, FL — implants, orthodontics & oral surgery near you. 4250 Alafaya Trail Suite 180, Oviedo FL 32765. Call (407) 359-1960.';
 $page_class       = 'page-service';
 include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
 ?>
@@ -11,7 +11,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
   <div class="hero-inner">
     <div class="hero-content">
       <span class="hero-badge">Oviedo, FL</span>
-      <h1>Dentist in Oviedo, FL<br><span class="hero-accent">Sonrisa Dental Specialists</span></h1>
+      <h1>Dental Implants & Orthodontics<br><span class="hero-accent">in Oviedo, FL</span></h1>
       <p class="hero-sub">Our flagship implant and oral surgery center on Alafaya Trail. Full-arch restoration, All-On-X, orthodontics, and complex reconstructive cases — all under one roof in Oviedo.</p>
       <div class="hero-cta-group">
         <a href="/dental-implants/survey.php" class="btn btn-primary btn-lg">Book a Consultation</a>

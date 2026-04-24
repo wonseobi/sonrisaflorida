@@ -1,6 +1,6 @@
 <?php
-$page_title       = 'Dental Implants | Sonrisa Dental Specialists';
-$page_description = 'Permanent, natural-looking dental implants from Sonrisa Dental Specialists. Single tooth, full arch, All-on-X, and same-day implants. Book a consultation today.';
+$page_title       = 'Dental Implants in Orlando, FL — All-on-X & Same-Day Implants | Sonrisa Dental Specialists';
+$page_description = 'Implant-only specialists in Lake Nona & Oviedo, FL. Single-tooth, All-on-4, All-on-6, All-on-X, same-day & full-mouth implants. Board-certified implantologist. Free consultation.';
 $page_class       = 'page-dental-implants';
 $nav_type         = 'dental-implants';
 include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
@@ -16,8 +16,8 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
     <div class="hero-content">
       <span class="hero-badge">Sonrisa Dental Specialists</span>
       <h1>
-        Lifelong Lasting<br>
-        <span class="hero-accent">Dental Implant Solutions</span>
+        Dental Implants in Orlando, FL<br>
+        <span class="hero-accent">Implant-Only Specialists</span>
       </h1>
       <p class="hero-sub">We are like the cardiologists of the mouth — specialists who understand that a healthier mouth leads to a healthier life. We restore your smile with the most advanced implant techniques available.</p>
       <div class="hero-cta-group">
