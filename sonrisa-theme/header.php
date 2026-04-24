@@ -36,10 +36,6 @@
   <script src="https://cdn.jsdelivr.net/npm/sienna-accessibility@latest/dist/sienna-accessibility.umd.js" defer></script>
 
   <style>
-  /* ── Universal nav — missing pages (red) ── */
-  a.nav-missing { color: #e53e3e !important; }
-  a.nav-missing:hover { color: #c53030 !important; }
-
   /* ── 2-column dropdown: flex approach for guaranteed top-to-bottom order ── */
   ul.nav-dropdown-2col {
     display: flex !important;
@@ -91,21 +87,8 @@
     .nav-col-group:first-child { border-right: none; border-bottom: 1px solid var(--border, #e5e7eb); }
   }
 
-  /* ── Homepage: force white header (override page-home transparent styles) ── */
-  .page-home .site-header { top: 0 !important; }
-  .page-home .header-inner {
-    background: #fff !important;
-    border-radius: 0 !important;
-    box-shadow: 0 1px 8px rgba(0,0,0,0.09) !important;
-  }
-  .page-home .site-header.scrolled { top: 0 !important; }
-  .page-home .site-header.scrolled .header-inner {
-    background: #fff !important;
-    border-radius: 0 !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.13) !important;
-  }
+  /* ── Homepage: header sits flush at top of topbar ── */
+  .page-home .site-header { top: var(--topbar-height, 44px) !important; }
 
   /* ── Footer quote: center only on mobile ── */
   .footer-tagline-item { text-align: left; }
@@ -171,9 +154,6 @@ if ( ! $hide_header ) : ?>
                 <li><a href="/orthodontics/treatments/ceramic-braces/">Ceramic Braces</a></li>
                 <li><a href="/orthodontics/treatments/lingual-braces/">Lingual Braces</a></li>
                 <li><a href="/orthodontics/treatments/self-ligating-braces/">Self-Ligating Braces</a></li>
-                <li><a href="#" class="nav-missing">Braces for Kids</a></li>
-                <li><a href="#" class="nav-missing">Braces for Teens</a></li>
-                <li><a href="#" class="nav-missing">Braces for Adults</a></li>
               </ul>
             </li>
             <li class="nav-col-group">
@@ -183,7 +163,6 @@ if ( ! $hide_header ) : ?>
                 <li><a href="/orthodontics/treatments/aligners/invisalign-adults/">Invisalign for Adults</a></li>
                 <li><a href="/orthodontics/treatments/aligners/invisalign-teens/">Invisalign for Teens</a></li>
                 <li><a href="/orthodontics/treatments/clear-aligners/">Clear Aligners</a></li>
-                <li><a href="#" class="nav-missing">Retainers</a></li>
                 <li><a href="/orthodontics/treatments/palate-expanders/">Palate Expanders</a></li>
                 <li><a href="/orthodontics/treatments/accelerated-orthodontics/">Accelerated Orthodontics</a></li>
               </ul>
@@ -219,16 +198,6 @@ if ( ! $hide_header ) : ?>
                 <li><a href="/dental-implants/financing/">Financing &amp; Insurance</a></li>
               </ul>
             </li>
-          </ul>
-        </li>
-
-        <li class="nav-item has-dropdown">
-          <a href="javascript:void(0)" class="nav-link">Oral Surgery <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
-          <ul class="nav-dropdown">
-            <li><a href="#" class="nav-missing">Wisdom Teeth</a></li>
-            <li><a href="#" class="nav-missing">IV Sedation</a></li>
-            <li><a href="#" class="nav-missing">Tooth Extractions</a></li>
-            <li><a href="#" class="nav-missing">Surgical Extractions</a></li>
           </ul>
         </li>
 

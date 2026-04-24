@@ -190,24 +190,24 @@ ul {
 ═══════════════════════════════════════ */
 .site-header {
   position: absolute;
-  top: calc(var(--topbar-height) + 12px);
+  top: var(--topbar-height);
   left: 0;
   right: 0;
   z-index: 100;
-  padding: 0 var(--gutter);
+  padding: 0;
 }
 
 .header-inner {
-  max-width: var(--container);
-  margin: 0 auto;
+  max-width: 100%;
+  margin: 0;
   height: 64px;
   display: flex;
   align-items: center;
   gap: 0;
   background: var(--white);
-  border-radius: 14px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.13);
-  padding: 0 8px 0 20px;
+  border-radius: 0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
+  padding: 0 8px 0 32px;
 }
 
 .site-logo {
@@ -661,14 +661,14 @@ a.service-nav-link:hover {
   transition: transform 0.25s, opacity 0.25s;
 }
 
-/* Scrolled state — pill stays, floats at top */
+/* Scrolled state — fixed full-width bar */
 .site-header.scrolled {
   position: fixed;
-  top: 8px;
+  top: 0;
 }
 
 .site-header.scrolled .header-inner {
-  box-shadow: 0 6px 32px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
 }
 
 /* ═══════════════════════════════════════
@@ -3107,10 +3107,10 @@ body.page-home {
 
   .nav-link {
     font-size: 18px;
-    padding: 14px 4px;
+    padding: 14px 10px;
     font-weight: 600;
     color: var(--white);
-    border-radius: 0;
+    border-radius: 8px;
     justify-content: space-between;
     width: 100%;
   }
@@ -3136,6 +3136,17 @@ body.page-home {
 
   .nav-item.dropdown-open .nav-dropdown {
     display: block;
+  }
+
+  /* Fix: 2-col flex dropdowns must respect mobile show/hide */
+  ul.nav-dropdown-2col {
+    display: none !important;
+  }
+
+  .nav-item.dropdown-open ul.nav-dropdown-2col {
+    display: flex !important;
+    flex-direction: column !important;
+    width: auto !important;
   }
 
   .nav-dropdown a {
