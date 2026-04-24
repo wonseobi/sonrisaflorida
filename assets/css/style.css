@@ -186,7 +186,7 @@ ul {
 }
 
 /* ═══════════════════════════════════════
-   SITE HEADER — floating pill
+   SITE HEADER — full-width bar
 ═══════════════════════════════════════ */
 .site-header {
   position: absolute;
@@ -195,18 +195,20 @@ ul {
   right: 0;
   z-index: 100;
   padding: 0;
+  background: var(--white);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
 }
 
 .header-inner {
-  max-width: 100%;
-  margin: 0;
+  max-width: var(--container);
+  margin: 0 auto;
   height: 64px;
   display: flex;
   align-items: center;
   gap: 0;
-  background: var(--white);
+  background: transparent;
   border-radius: 0;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
+  box-shadow: none;
   padding: 0 8px 0 32px;
 }
 
@@ -665,10 +667,12 @@ a.service-nav-link:hover {
 .site-header.scrolled {
   position: fixed;
   top: 0;
+  background: var(--white);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
 }
 
 .site-header.scrolled .header-inner {
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: none;
 }
 
 /* ═══════════════════════════════════════
