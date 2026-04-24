@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?php echo htmlspecialchars($page_title, ENT_QUOTES, 'UTF-8'); ?></title>
-  <meta name="description" content="<?php echo htmlspecialchars($page_description, ENT_QUOTES, 'UTF-8'); ?>">
+  <?php
+  // $sonrisa_page is set by each page template before get_header().
+  global $sonrisa_page;
+  $hide_top_bar   = ! empty( $sonrisa_page['hide_top_bar'] );
+  $hide_header    = ! empty( $sonrisa_page['hide_header'] );
+  $hide_nav_links = ! empty( $sonrisa_page['hide_nav_links'] );
+  $nav_type       = $sonrisa_page['nav_type'] ?? '';
+  ?>
 
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -25,9 +31,6 @@
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="/assets/css/style.css">
 
   <!-- Accessibility Widget -->
   <script src="https://cdn.jsdelivr.net/npm/sienna-accessibility@latest/dist/sienna-accessibility.umd.js" defer></script>
@@ -84,21 +87,8 @@
     .nav-col-group:first-child { border-right: none; border-bottom: 1px solid var(--border, #e5e7eb); }
   }
 
-  /* ── Homepage: force white header (override page-home transparent styles) ── */
-  .page-home .site-header { top: 0 !important; }
-  .page-home .header-inner {
-    background: #fff !important;
-    border-radius: 0 !important;
-    box-shadow: 0 1px 8px rgba(0,0,0,0.09) !important;
-  }
-  .page-home .site-header.scrolled { top: 0 !important; }
-  .page-home .site-header.scrolled .header-inner {
-    background: #fff !important;
-    border-radius: 0 !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.13) !important;
-  }
+  /* ── Homepage: header sits flush at top of topbar ── */
+  .page-home .site-header { top: var(--topbar-height, 44px) !important; }
 
   /* ── Footer quote: center only on mobile ── */
   .footer-tagline-item { text-align: left; }
@@ -106,8 +96,11 @@
     .footer-tagline-item { text-align: center !important; }
   }
   </style>
+
+  <?php wp_head(); ?>
 </head>
-<body class="<?php echo htmlspecialchars($page_class, ENT_QUOTES, 'UTF-8'); ?>">
+<body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
 
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5S47HFG8"
@@ -115,20 +108,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <?php
-// Active nav helper
-$_nav_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-function nav_active($prefix) {
-  global $_nav_path;
-  if ($prefix === '/') return $_nav_path === '/';
-  return strpos($_nav_path, $prefix) === 0;
-}
-function nav_cls($prefix) {
-  return nav_active($prefix) ? ' active' : '';
-}
-?>
-
-<!-- ── TOP BAR ── -->
-<?php if (empty($hide_top_bar)): ?>
+// ── TOP BAR ──────────────────────────────────────────────────────────────────
+if ( ! $hide_top_bar ) : ?>
 <div class="top-bar">
   <div class="top-bar-inner">
     <span>Sonrisa Dental Specialists &mdash; Where Your Smile Comes First.</span>
@@ -136,8 +117,9 @@ function nav_cls($prefix) {
 </div>
 <?php endif; ?>
 
-<!-- ── SITE HEADER ── -->
-<?php if (empty($hide_header)): ?>
+<?php
+// ── SITE HEADER ───────────────────────────────────────────────────────────────
+if ( ! $hide_header ) : ?>
 <header class="site-header">
   <div class="header-inner">
 
@@ -149,11 +131,11 @@ function nav_cls($prefix) {
     </a>
 
     <nav class="site-nav" aria-label="Main navigation">
-      <?php if (empty($hide_nav_links)): ?>
+      <?php if ( ! $hide_nav_links ) : ?>
       <!-- ── UNIVERSAL NAV ── -->
       <ul class="nav-list">
 
-        <li class="nav-item has-dropdown<?= (nav_active('/lake-nona') || nav_active('/oviedo')) ? ' nav-item-active' : '' ?>">
+        <li class="nav-item has-dropdown<?= ( sonrisa_nav_active('/lake-nona') || sonrisa_nav_active('/oviedo') ) ? ' nav-item-active' : '' ?>">
           <a href="javascript:void(0)" class="nav-link">Locations <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
           <ul class="nav-dropdown">
             <li><a href="/lake-nona/">Lake Nona</a></li>
@@ -161,7 +143,7 @@ function nav_cls($prefix) {
           </ul>
         </li>
 
-        <li class="nav-item has-dropdown<?= nav_active('/orthodontics') ? ' nav-item-active' : '' ?>">
+        <li class="nav-item has-dropdown<?= sonrisa_nav_cls('/orthodontics') ?>">
           <a href="/orthodontics/" class="nav-link">Orthodontics <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
           <ul class="nav-dropdown nav-dropdown-wide nav-dropdown-2col">
             <li class="nav-col-group">
@@ -188,7 +170,7 @@ function nav_cls($prefix) {
           </ul>
         </li>
 
-        <li class="nav-item has-dropdown<?= nav_active('/dental-implants') ? ' nav-item-active' : '' ?>">
+        <li class="nav-item has-dropdown<?= sonrisa_nav_cls('/dental-implants') ?>">
           <a href="/dental-implants/" class="nav-link">Dental Implants <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
           <ul class="nav-dropdown nav-dropdown-wide nav-dropdown-2col">
             <li class="nav-col-group">
@@ -219,7 +201,7 @@ function nav_cls($prefix) {
           </ul>
         </li>
 
-        <li class="nav-item has-dropdown<?= nav_active('/orthodontics/new-patients') ? ' nav-item-active' : '' ?>">
+        <li class="nav-item has-dropdown<?= sonrisa_nav_cls('/orthodontics/new-patients') ?>">
           <a href="javascript:void(0)" class="nav-link">New Patients <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
           <ul class="nav-dropdown">
             <li><a href="/orthodontics/new-patients/free-consultation/">Free In-Office Consultation</a></li>
@@ -230,7 +212,7 @@ function nav_cls($prefix) {
           </ul>
         </li>
 
-        <li class="nav-item has-dropdown<?= nav_active('/orthodontics/active-patients') ? ' nav-item-active' : '' ?>">
+        <li class="nav-item has-dropdown<?= sonrisa_nav_cls('/orthodontics/active-patients') ?>">
           <a href="javascript:void(0)" class="nav-link">Active Patients <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
           <ul class="nav-dropdown">
             <li><a href="/orthodontics/active-patients/virtual-appointments/">Virtual Appointments</a></li>
@@ -239,7 +221,7 @@ function nav_cls($prefix) {
           </ul>
         </li>
 
-        <li class="nav-item has-dropdown<?= nav_active('/orthodontics/success-stories') ? ' nav-item-active' : '' ?>">
+        <li class="nav-item has-dropdown<?= sonrisa_nav_cls('/orthodontics/success-stories') ?>">
           <a href="javascript:void(0)" class="nav-link">Stories <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
           <ul class="nav-dropdown">
             <li><a href="/orthodontics/success-stories/smile-gallery/">Smile Gallery</a></li>
@@ -248,7 +230,7 @@ function nav_cls($prefix) {
           </ul>
         </li>
 
-        <li class="nav-item has-dropdown<?= nav_active('/about') ? ' nav-item-active' : '' ?>">
+        <li class="nav-item has-dropdown<?= sonrisa_nav_cls('/about') ?>">
           <a href="javascript:void(0)" class="nav-link">About <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
           <ul class="nav-dropdown">
             <li><a href="/about/team/">Meet the Team</a></li>
@@ -266,11 +248,11 @@ function nav_cls($prefix) {
         </li>
 
       </ul>
-      <a href="/dental-implants/survey.php" class="btn btn-primary nav-cta">Book Now</a>
+      <a href="/dental-implants/survey/" class="btn btn-primary nav-cta">Book Now</a>
       <?php endif; ?>
     </nav>
 
-    <?php if (empty($hide_nav_links)): ?>
+    <?php if ( ! $hide_nav_links ) : ?>
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>

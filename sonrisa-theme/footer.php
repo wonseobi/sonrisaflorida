@@ -42,6 +42,22 @@
     </div>
 
     <div class="footer-col">
+      <h3 class="footer-heading">About &amp; Resources</h3>
+      <ul class="footer-links">
+        <li><a href="/about/doctor/">Meet the Doctor</a></li>
+        <li><a href="/about/team/">Meet the Team</a></li>
+        <li><a href="/lake-nona/">Lake Nona Office</a></li>
+        <li><a href="/oviedo/">Oviedo Office</a></li>
+        <li><a href="/orthodontics/new-patients/free-consultation/">Free Consultation</a></li>
+        <li><a href="/orthodontics/success-stories/reviews/">Reviews</a></li>
+        <li><a href="/orthodontics/success-stories/before-after/">Before &amp; After</a></li>
+        <li><a href="/orthodontics/about/blog/">Blog</a></li>
+        <li><a href="/privacy-policy/">Privacy Policy</a></li>
+        <li><a href="/terms-of-service/">Terms of Service</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
       <h3 class="footer-heading">Contact</h3>
       <ul class="footer-links footer-contact">
         <li>
@@ -79,7 +95,6 @@
   </div>
 </footer>
 
-<!-- Main JS -->
-<script src="/assets/js/main.js"></script>
+<?php wp_footer(); ?>
 </body>
 </html>
