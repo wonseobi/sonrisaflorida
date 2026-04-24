@@ -219,6 +219,16 @@ function nav_cls($prefix) {
           </ul>
         </li>
 
+        <li class="nav-item has-dropdown<?= nav_active('/oral-surgery') ? ' nav-item-active' : '' ?>">
+          <a href="javascript:void(0)" class="nav-link">Oral Surgery <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+          <ul class="nav-dropdown">
+            <li><a href="/oral-surgery/wisdom-teeth/">Wisdom Teeth</a></li>
+            <li><a href="/oral-surgery/iv-sedation/">IV Sedation</a></li>
+            <li><a href="/oral-surgery/tooth-extraction/">Tooth Extraction</a></li>
+            <li><a href="/oral-surgery/surgical-extraction/">Surgical Extraction</a></li>
+          </ul>
+        </li>
+
         <li class="nav-item has-dropdown<?= nav_active('/orthodontics/new-patients') ? ' nav-item-active' : '' ?>">
           <a href="javascript:void(0)" class="nav-link">New Patients <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
           <ul class="nav-dropdown">
@@ -254,16 +264,6 @@ function nav_cls($prefix) {
             <li><a href="/about/team/">Meet the Team</a></li>
             <li><a href="/orthodontics/about/our-costs/">Our Costs</a></li>
             <li><a href="/orthodontics/about/blog/">Blog</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item has-dropdown<?= nav_active('/oral-surgery') ? ' nav-item-active' : '' ?>">
-          <a href="javascript:void(0)" class="nav-link">Oral Surgery <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
-          <ul class="nav-dropdown">
-            <li><a href="/oral-surgery/wisdom-teeth/">Wisdom Teeth</a></li>
-            <li><a href="/oral-surgery/iv-sedation/">IV Sedation</a></li>
-            <li><a href="/oral-surgery/tooth-extraction/">Tooth Extraction</a></li>
-            <li><a href="/oral-surgery/surgical-extraction/">Surgical Extraction</a></li>
           </ul>
         </li>
 
